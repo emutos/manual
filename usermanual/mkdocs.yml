@@ -1,0 +1,12 @@
+# config file for EmuTOS user manual. Per https://www.mkdocs.org/user-guide/configuration/
+
+site_name: EmuTOS User Manual
+
+# repo_url: https://github.com/emutos
+
+site_description: The User Manual for EmuTOS, a free operating system for Atari ST computers, and more.
+
+site_author: EmuTOS Documentation Team.
+
+copyright: Copyright &copy; 2021 through the most recent change by the respective authors.
+
