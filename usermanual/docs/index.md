@@ -43,13 +43,13 @@ No-one at Atari anticipated that thirty years on people would still be hacking A
 
 Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``c:\auto``. The prg version of EmuTOS provides an executable, ``emutos*.prg``, which you can copy into ``c:\auto``. The floppy version of EmuTOS provides a floppy disk image with a hidden ``.sys`` file in its root directory.
 
-This is slower than booting from ROM and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
+This is slower than booting from [ROM](#glossary) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
 
 Get the emutos-prg-\*.zip or emutos-floppy-\* zip file. See the readme.txt file in the archive for more information.
 
 #### Read Only Memory
 
-Almost all Atari STs came with TOS in read only memory (ROM). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, EPROM). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
+Almost all Atari STs came with TOS in [read only memory (ROM)](#glossary). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#glossary)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
 
 Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation.
 
