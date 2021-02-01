@@ -2,6 +2,9 @@
 
 site_name: EmuTOS User Manual
 
+# theme: readthedocs
+theme: mkdocs
+
 # repo_url: https://github.com/emutos
 
 site_description: The User Manual for EmuTOS, a free operating system for Atari ST computers, and more.
