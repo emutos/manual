@@ -110,7 +110,9 @@ The rest of that screen shot is from the Hatari emulator, so it is not documente
 
 ## Reporting Bugs
 
-How do you want bugs reported?
+Before you report a bug, you should probably search the EmuTOS [development mailing list's archives](https://sourceforge.net/p/emutos/mailman/emutos-devel/) to see if anyone else has reported your problem or something similar, and a possible solution.
+
+To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [development mailing list](https://sourceforge.net/projects/emutos/lists/emutos-devel). There are other, deprecated, ways to file bugs, but this allows anyone to join the discussion, and will usually get a faster response.
 
 ## Glossary
 
