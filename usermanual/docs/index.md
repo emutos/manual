@@ -20,6 +20,12 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 processo
 
 Current releases give a detailed compatibility list in the file ``doc/status.txt``.
 
+## Compatibility
+
+A list of programs that are known to be [incompatible with EmuTOS](https://github.com/emutos/emutos/blob/master/doc/incompatible.txt) is in the source tree. Often, these programs take advantage of undocumented aspects of TOS. These often break on different versions of TOS, sometimes on different languages in the same version of TOS, as well as on EmuTOS. Please check this list before reporting an EmuTOS bug.
+
+Hatari users will find the [Hatari and EmuTOS](https://hatari.tuxfamily.org/doc/emutos.txt) document useful. However, check for the most [recent versions of EmuTOS](https://emutos.sourceforge.io/download.html).
+
 ## Installation
 
 In many cases, installation of a new operating system is covered by the hardware documentation.
@@ -43,13 +49,13 @@ No-one at Atari anticipated that thirty years on people would still be hacking A
 
 Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``c:\auto``. The prg version of EmuTOS provides an executable, ``emutos*.prg``, which you can copy into ``c:\auto``. The floppy version of EmuTOS provides a floppy disk image with a hidden ``.sys`` file in its root directory.
 
-This is slower than booting from [ROM](#glossary) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
+This is slower than booting from [ROM](#rom) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
 
 Get the emutos-prg-\*.zip or emutos-floppy-\* zip file. See the readme.txt file in the archive for more information.
 
 #### Read Only Memory
 
-Almost all Atari STs came with TOS in [read only memory (ROM)](#glossary). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#glossary)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
+Almost all Atari STs came with TOS in [read only memory (ROM)](#rom). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#eprom)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
 
 Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation.
 
@@ -61,11 +67,16 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 ## EmuCON
 
+
+## Reporting Bugs
+
+How do you want bugs reported?
+
 ## Glossary
 
-* EPROM: Erasable Programmable Read Only Memory, reprogrammable ROM. Generally more useful in experimental situations.
+* <a id="eprom"></a>EPROM: Erasable Programmable Read Only Memory, reprogrammable [ROM](#rom). Generally more useful in experimental situations.
 
-* ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
+* <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
 
 
 ## Resources
