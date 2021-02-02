@@ -65,6 +65,8 @@ There is also a cartridge version, which goes in the game cartridge on Atari har
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
+### Other Hardware here....
+
 ## EmuCON
 
 
