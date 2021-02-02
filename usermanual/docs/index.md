@@ -67,6 +67,44 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 ### Other Hardware here....
 
+## Booting
+
+Sucessful initialization will produce a screen similar to this one.
+
+![Screenshot](images/boot.screen.png)
+
+*Above: EmuTOS boot screen*
+
+The normal boot sequence is to initialize the hardware, then the operating system in ROM. If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in ``c:\auto`` and loads accessories in ``c:\``. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in ``a:\auto`` and loads accessories in ``a:``. However, you can bypass portions of that sequence as noted below.
+
+There are a number of features to note about the boot screen.
+
+- Probably the most important is that if you want more time to study the boot screen, you can hold a shift key down.
+
+- The version of EmuTOS that is booting. This shows only major and minor revision numbers (e.g. 1.3) but not patch numbers (e.g. 1.3.2).
+
+- The type of CPU found.
+
+- The hardware found (or, as in this case, emulated).
+
+- How much main memory was found.
+
+- An enumeration of the floppy drives (A and B) and hard drives found.
+
+- The time and date of the boot.
+
+- Some useful functions:
+
+    - Hold a control key down to bypass the ``c:\auto`` directory and installing accessories accessories. This is useful for debugging complicated boot sequences.
+
+    - Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from ROM.
+
+    - To boot from any drive, hold down its letter. For example, to boot from I: hold down the i key. This allows for different custom setups.
+
+    - Hold the escape key down to bypass the desktop and go directly to [EmuCON](#emucon). This might also be useful for recovering from a boot sequence gone wrong.
+
+The rest of that screen shot is from the Hatari emulator, so it is not documented here.
+
 ## EmuCON
 
 
