@@ -16,7 +16,7 @@ This manual is for EmuTOS users. For more on EmuTOS, see the [web site](https://
 
 ### What This Manual Doesn't Cover
 
-Specific hardware. EmuTOS expects certain hardware, for example a 680x0 processor. It runs on Atari ST hardware, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
+Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
 
 Current releases give a detailed compatibility list in the file ``doc/status.txt``.
 
@@ -47,7 +47,9 @@ No-one at Atari anticipated that thirty years on people would still be hacking A
 
 #### Hard or Floppy Drive
 
-Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``c:\auto``. The prg version of EmuTOS provides an executable, ``emutos*.prg``, which you can copy into ``c:\auto``. The floppy version of EmuTOS provides a floppy disk image with a hidden ``.sys`` file in its root directory.
+Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``C:\AUTO``. The prg version of EmuTOS provides an executable, ``emutos*.prg``, which you can copy into ``C:\AUTO``. Or you can put it any place convenient, and launch it at will.
+
+The floppy version of EmuTOS provides a floppy disk image with a hidden ``.sys`` file in its root directory.
 
 This is slower than booting from [ROM](#rom) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
 
@@ -57,11 +59,11 @@ Get the emutos-prg-\*.zip or emutos-floppy-\* zip file. See the readme.txt file 
 
 Almost all Atari STs came with TOS in [read only memory (ROM)](#rom). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#eprom)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
 
-Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation.
+Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation. Note that the 192K ROMs do not provide [EmuCON](#emucon), so you may prefer the 256K or 512K ROMs if your hardware will support them.
 
 #### Cartridge
 
-There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no AES or desktop. It is [EmuCON](#emucon) only. For these reasons we suggest it only for very tight memory situations.
+There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no AES or desktop. It is [EmuCON](#emucon) only. For these reasons we suggest it only for very tight memory situations, or in the unusual case of bringing up new hardware.
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
@@ -75,13 +77,13 @@ Sucessful initialization will produce a screen similar to this one.
 
 *Above: EmuTOS boot screen*
 
-The normal boot sequence is to initialize the hardware, then the operating system in ROM. If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in ``c:\auto`` and loads accessories in ``c:\``. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in ``a:\auto`` and loads accessories in ``a:``. However, you can bypass portions of that sequence as noted below.
+The normal boot sequence is to initialize the hardware, then the operating system in ROM. If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in ``C:\AUTO`` and loads accessories in ``C:\``. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in ``A:\AUTO`` and loads accessories in ``A:``. However, you can bypass portions of that sequence as noted below.
 
 There are a number of features to note about the boot screen.
 
 - Probably the most important is that if you want more time to study the boot screen, you can hold a shift key down.
 
-- The version of EmuTOS that is booting. This shows only major and minor revision numbers (e.g. 1.3) but not patch numbers (e.g. 1.3.2).
+- The version of EmuTOS that is booting. This shows major and minor revision numbers (e.g. 1.3) and the patch number if one is present (e.g. 1.3.2).
 
 - The type of CPU found.
 
@@ -89,24 +91,27 @@ There are a number of features to note about the boot screen.
 
 - How much main memory was found.
 
-- An enumeration of the floppy drives (A and B) and hard drives found.
+- An enumeration of the floppy drives (A and B) and hard drive partitions found.
 
-- The time and date of the boot.
+- The time and date of the boot if EmuTOS finds a real-time clock. If no real-time clock is found, a bogus time and date will be shown in reverse video.
 
 - Some useful functions:
 
-    - Hold a control key down to bypass the ``c:\auto`` directory and installing accessories accessories. This is useful for debugging complicated boot sequences.
+    - Hold a control key down to bypass the ``C:\AUTO`` directory and installing accessories. This is useful for debugging complicated boot sequences.
 
     - Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from ROM.
 
-    - To boot from any drive, hold down its letter. For example, to boot from I: hold down the i key. This allows for different custom setups.
+    - To boot from any drive, press its letter. For example, to boot from I: press the i key. This allows for different custom setups.
 
-    - Hold the escape key down to bypass the desktop and go directly to [EmuCON](#emucon). This might also be useful for recovering from a boot sequence gone wrong.
+    - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might also be useful for recovering from a boot sequence gone wrong.
 
 The rest of that screen shot is from the Hatari emulator, so it is not documented here.
 
 ## EmuCON
 
+(More to come!)
+
+EmuCON is not provided in 192K ROMS.
 
 ## Reporting Bugs
 
@@ -116,10 +121,13 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 ## Glossary
 
+* <a id="aes"></a>AES: *Application Environment Service*, the highest level graphic environment in EmuTOS.
+
 * <a id="eprom"></a>EPROM: Erasable Programmable Read Only Memory, reprogrammable [ROM](#rom). Generally more useful in experimental situations.
 
 * <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
 
+* <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font suport, and handles user events such as mouse clicks.
 
 ## Resources
 
