@@ -75,7 +75,7 @@ Sucessful initialization will produce a screen similar to this one.
 
 ![Screenshot](images/boot.screen.png)
 
-*Above: EmuTOS boot screen*
+*Above: EmuTOS boot screen on an RGB screen*
 
 The normal boot sequence is to initialize the hardware, then the operating system in ROM. If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in ``C:\AUTO`` and loads accessories in ``C:\``. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in ``A:\AUTO`` and loads accessories in ``A:``. However, you can bypass portions of that sequence as noted below.
 
