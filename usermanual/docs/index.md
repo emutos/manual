@@ -105,8 +105,6 @@ There are a number of features to note about the boot screen.
 
     - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might also be useful for recovering from a boot sequence gone wrong.
 
-The rest of that screen shot is from the Hatari emulator, so it is not documented here.
-
 ## The Desktop
 
 ![Screenshot](images/minimal.atari.desktop.mono.png)
