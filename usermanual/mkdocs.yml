@@ -13,3 +13,6 @@ site_author: EmuTOS Documentation Team.
 
 copyright: Copyright &copy; 2021 through the most recent change by the respective authors.
 
+markdown_extensions:
+    - toc:
+        permalink: true
