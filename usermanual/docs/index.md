@@ -107,6 +107,56 @@ There are a number of features to note about the boot screen.
 
 The rest of that screen shot is from the Hatari emulator, so it is not documented here.
 
+## The Desktop
+
+![Screenshot](images/minimal.atari.desktop.mono.png)
+
+*Above: EmuTOS minimal desktop screen on a monochrome screen*
+
+> I note the printer icon even though I configured Hatari not to have a printer. Is that correct? Should EmuTOS show a ghost printer?
+
+### Minimal Desktop
+
+If you have a minimal Atari system, this screen shot is what you will see: a plain desktop. It's not very interesting. Still, a few things to note.
+
+You can bring the mouse pointer up to the Desk entry in the navigation bar. That will show you the Desk menu, with one entry: "Desktop info...". Click on that to see information about Emutos, including the version number.
+
+The File menu will let you format a floppy, which isn't very useful without a floppy drive. It will also let you enter [EmuCON](#emucon). If [NatFeats](#natfeats) are enabled, you can use the last entry to power off your computer (or exit your emulator).
+
+The View menu lets you select how you seen directories. You can also set the background and you can set a number of other preferences. You can also read a ``*.INF`` file, which is a desktop information file, similar to the Atari TOS ``DESKTOP.INF`` file. EmuTOS uses ``EMUDESK.INF``.
+
+### Floppy Disk Only Desktop
+
+![Screenshot](images/floppy.atari.desktop.mono.png)
+
+If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accomodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory.
+
+>> We recommend you consider mass storage other than floppy droves. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
+
+Now the File menu is more interesting. You can do a lot of typical file manipilations.
+
+> One thing I don't see is the ability to move a file. I see it in EmuCon.
+
+### Hard Drive
+
+
+### Using the Desktop
+
+Using a new (to you) computer is a bit like moving into a new home. "Where did we put that..." This section will walk you through some typical operations and some things that may make life a bit easier.
+
+Many options also have shortcut keys, e.g. Control S to save the desktop. You can note these to the right of the menu entries.
+
+#### Saving the Desktop
+
+As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit Control S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
+
+#### Opening a Disk Drive or directory.
+
+To open a window on a disk drive, double click on its icon. Or hit an Alt key and the drive letter, e.g. Alt g to open G:. To view any directory (folder), double click on its entry. Note that in text view mode, directories are indentified by a small icon to the left of the name of the directory. In icon view mode, they have a manila folder icon, rather than the piece of paper icon files get.
+
+If you save the desktop with windows open to directories, you will preserve those open windows across boots. This is handy for directories you use a lot.
+
+
 ## EmuCON
 
 (More to come!)
@@ -124,6 +174,8 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 * <a id="aes"></a>AES: *Application Environment Service*, the highest level graphic environment in EmuTOS.
 
 * <a id="eprom"></a>EPROM: Erasable Programmable Read Only Memory, reprogrammable [ROM](#rom). Generally more useful in experimental situations.
+
+* <a id="natfeats" ></a>NatFeats: Native Features support. This is a number of features that some ST emulators provide, and which EmuTOS supports. See your emulator's manual for details.
 
 * <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
 
