@@ -154,6 +154,17 @@ To open a window on a disk drive, double click on its icon. Or hit an Alt key an
 
 If you save the desktop with windows open to directories, you will preserve those open windows across boots. This is handy for directories you use a lot.
 
+You can select multiple files, directories and disk partitions. If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with Control i. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
+
+#### File Information
+
+EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked hidden, system, and read-only.
+
+The File Information dialog (File -> Info/Rename, Control I) will show you its name (with the option to change it), size, date and time, and whether a file is read-write or read only.
+
+If you are looking at a folder (directory), the dialog will show you the number of files and folders within it, as well as the time and date.
+
+For partitions or floppy diskettes, you will see the drive identifier (e.g. A for a floppy drive), the disk label, the numbers of files and folders, and the space used by files (not directories, or metadata), and the available space (in bytes).
 
 ## EmuCON
 
