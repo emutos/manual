@@ -148,7 +148,7 @@ Many options also have shortcut keys, e.g. Control S to save the desktop. You ca
 
 As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit Control S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
 
-#### Opening a Disk Drive or directory.
+#### Opening a Disk Drive or Directory
 
 To open a window on a disk drive, double click on its icon. Or hit an Alt key and the drive letter, e.g. Alt g to open G:. To view any directory (folder), double click on its entry. Note that in text view mode, directories are indentified by a small icon to the left of the name of the directory. In icon view mode, they have a manila folder icon, rather than the piece of paper icon files get.
 
