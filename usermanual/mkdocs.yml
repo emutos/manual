@@ -3,7 +3,10 @@
 site_name: EmuTOS User Manual
 
 # theme: readthedocs
-theme: mkdocs
+theme:
+        name: mkdocs
+        navigation_depth: 6
+        toc_depth: 6
 
 # repo_url: https://github.com/emutos
 
