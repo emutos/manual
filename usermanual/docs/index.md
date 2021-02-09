@@ -156,6 +156,8 @@ If you save the desktop with windows open to directories, you will preserve thos
 
 You can select multiple files, directories and disk partitions. If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with Control i. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
 
+You can also select all items (File -> Select All Items, Control a). Having done that, you can then use Shift Click to deselect items.
+
 #### File Information
 
 EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked hidden, system, and read-only.
