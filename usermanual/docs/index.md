@@ -4,6 +4,44 @@ Welcome!
 
 This is a work in progress, as is EmuTOS itself. Please bear with us as we improve it. Contributions are welcome.
 
+## Table of Contents
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
+
+- [The EmuTOS User Manual](#the-emutos-user-manual)
+    - [Table of Contents](#table-of-contents)
+    - [License](#license)
+    - [Audience](#audience)
+        - [What This Manual Covers](#what-this-manual-covers)
+        - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
+    - [Compatibility](#compatibility)
+    - [Installation](#installation)
+        - [Getting EmuTOS](#getting-emutos)
+        - [Atari](#atari)
+            - [Hard or Floppy Drive](#hard-or-floppy-drive)
+            - [Read Only Memory](#read-only-memory)
+            - [Cartridge](#cartridge)
+        - [Other Hardware here....](#other-hardware-here)
+    - [Booting](#booting)
+    - [The Desktop](#the-desktop)
+        - [Minimal Desktop](#minimal-desktop)
+        - [Floppy Disk Only Desktop](#floppy-disk-only-desktop)
+        - [Hard Drive](#hard-drive)
+        - [Using the Desktop](#using-the-desktop)
+            - [Saving the Desktop](#saving-the-desktop)
+            - [Opening a Disk Drive or Directory](#opening-a-disk-drive-or-directory)
+            - [File Information](#file-information)
+            - [File Mask](#file-mask)
+        - [Desktop Accessories](#desktop-accessories)
+        - [Control Panel eXtensions](#control-panel-extensions)
+    - [EmuCON](#emucon)
+    - [Reporting Bugs](#reporting-bugs)
+    - [Glossary](#glossary)
+    - [Resources](#resources)
+
+<!-- markdown-toc end -->
+
 ## License
 
 Erm, what is our license here? Gnu FDL? Creative Commons License?
