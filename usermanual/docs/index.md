@@ -168,11 +168,18 @@ Folder windows have several widgets of interest.
 
     To move the window around on the desktop, click and drag the title bar.
 
-* In the upper left-hand corner is the folder button. Clicking on this goes up a folder in the hierarchy. At the top folder of a partition, it will close the window.
+* In the upper left-hand corner is the folder button. Clicking on this goes up a folder in the hierarchy. At the top folder of a partition, it will close the window. You can also go up a folder with File -> Close folder (^H). You can close a window regardless of where in the file hierarchy it is with File -> Close top window (^U).
 
 * To toggle full screen mode, click on the upper right full screen button.
 
 * To manually re-size, click on the lower right and drag as needed.
+
+* To execute a program, double click on it. If it has the TTP (Tos Takes Parameters) extensions, EmuTOS will ask for parameters. Clicking on the OK button or hitting the Return or Enter key will execute the program with whatever parameters you have given it. If the program is of type PRG, EmuTOS will simply execute it.
+
+* To display any non-program file, double click on it. You can send it to your printer. Or you can show it. EmuTOS will display it one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q bails out of showing the file.
+
+To create a new folder, File -> New Folder (^N).
+
 
 
 
