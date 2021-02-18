@@ -144,6 +144,8 @@ Using a new (to you) computer is a bit like moving into a new home. "Where did w
 
 Many options also have shortcut keys, e.g. Control S to save the desktop. You can note these to the right of the menu entries.
 
+Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter.
+
 #### Saving the Desktop
 
 As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit Control S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
@@ -158,6 +160,22 @@ You can select multiple files, directories and disk partitions. If you then sele
 
 You can also select all items (File -> Select All Items, Control a). Having done that, you can then use Shift Click to deselect items.
 
+Folder windows have several widgets of interest.
+
+* Scroll bars on the right and bottom allow scrolling. Click on the scroll bar for gross movement, or on the arrows at the ends of the scroll bar for fine movement.
+
+* The title bar, across the top, has the path to the current directory, e.g. `C:\AUTO\*.*` or `C:\*.*`. You can specify which files will show up in the window by [setting the file mask](#file-mask). The title bar shows the selected file mask.
+
+    To move the window around on the desktop, click and drag the title bar.
+
+* In the upper left-hand corner is the folder button. Clicking on this goes up a folder in the hierarchy. At the top folder of a partition, it will close the window.
+
+* To toggle full screen mode, click on the upper right full screen button.
+
+* To manually re-size, click on the lower right and drag as needed.
+
+
+
 #### File Information
 
 EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked hidden, system, and read-only.
@@ -167,6 +185,17 @@ The File Information dialog (File -> Info/Rename, Control I) will show you its n
 If you are looking at a folder (directory), the dialog will show you the number of files and folders within it, as well as the time and date.
 
 For partitions or floppy diskettes, you will see the drive identifier (e.g. A for a floppy drive), the disk label, the numbers of files and folders, and the space used by files (not directories, or metadata), and the available space (in bytes).
+
+#### File Mask
+
+You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional wild cards, * (many characters) and ? (one character), work. The title bar shows the file mask.
+
+### Desktop Accessories
+
+### Control Panel eXtensions
+
+Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are availabe in some versions of TOS, and in EmuTOS.
+
 
 ## EmuCON
 
