@@ -23,7 +23,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
             - [Hard or Floppy Drive](#hard-or-floppy-drive)
             - [Read Only Memory](#read-only-memory)
             - [Cartridge](#cartridge)
-            - [Amiga](#amiga)
+        - [Amiga](#amiga)
         - [Other Hardware](#other-hardware)
     - [Booting](#booting)
     - [The Desktop](#the-desktop)
@@ -133,7 +133,7 @@ There is also a cartridge version, which goes in the game cartridge on Atari har
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
-#### Amiga ####
+### Amiga ###
 
 ### Other Hardware
 
