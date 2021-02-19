@@ -97,7 +97,7 @@ Get the emutos-prg-\*.zip or emutos-floppy-\* zip file. See the readme.txt file 
 
 Almost all Atari STs came with TOS in [read only memory (ROM)](#rom). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#eprom)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
 
-Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation. Note that the 192K ROMs do not provide [EmuCON](#emucon), so you may prefer the 256K or 512K ROMs if your hardware will support them.
+Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation. Note that the 192K ROMs do not provide [EmuCON](#emucon), so you may prefer the 256K or 512K ROMs if your hardware will support them. However, you can add it to a disk with the ``emucon-X.Y.zip`` archive.
 
 #### Cartridge
 
@@ -244,9 +244,57 @@ Control Panel eXtensions (CPXs) are short programs that extend the control panel
 
 ## EmuCON
 
-(More to come!)
+EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.
 
-EmuCON is not provided in 192K ROMS.
+It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works, although not to the extent of a full-up Unix shell. MS-DOS style wild cards also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
+
+```
+C:\>echo foo > bar.txt
+C:\>ls bar*.*
+BAR.TXT
+C:\>cat bar.txt
+foo
+C:\>
+```
+Given part of a file name or path, EmuCON will do a C Shell or DOS style tab completion. That is, enter part of a path, and hit tab. The shell will cycle through one or more possible completions. Any other character adds that character to the path. You can use this repeatedly to build up a long path fairly easily.
+
+EmuTOS's built-in VT-52 emulator respects the RS-232 flow control characters, ^S to stop, and ^Q to resume. ^C will (usually) stop a program.
+
+The built-in commands are:
+
+| Command   | Usage |
+|-----------|-------|
+| cat/type  | Show a file. Like ``cat`` and  ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
+| cd        | Change directory. If you begin with a drive letter, e.g. ``D:``, you can change to a different partition. |
+| chmod     | Change the permissions on a file. These are the FAT permissions: hidden, system, and read-only. Use MS-DOS syntax for the permissions, not Unix. |
+| cls/clear | Clear the screen and home the cursor. |
+| cp/copy   | Copy a file. See ``mv``/``move`` below. |
+| echo      | Sends everything after it on the line to the display. |
+| exit      | Leave EmuCON. |
+| help      | Show a list of built in commands (this table). Given a command as an argument, show a brief summary of that command's usage. |
+| ls/dir    | Show a directory listing. Given a path, display that file or directory. |
+| mkdir/md  | Make a directory. |
+| mode      | Set characteristics of the "terminal", e.g. screen resolution. |
+| more      | Display a file one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q or ^C bails out of showing the file. |
+| mv/move   | Move a file. See also ``cp``/``copy`` above. |
+| path      | Set a search path, analogous to the PATH environment string in DOS or Unix. |
+| pwd       | Print the working (current) directory. |
+| ren       | Rename (move within the working directory). |
+| rm/del    | Remove or delete the given file(s), but not directories. |
+| rmdir/rd  | Remove or delete the given directories. |
+| show      | Show information about the given drive. |
+| version   | Show the current version of GEMDOS (not the same as the current version of EmuTOS). |
+| wrap      | Turn screen wrapping on or off, or show its current state. |
+
+The `help` command shows the (above) list of commands, or individual help for a specific command, like this:
+
+```
+C:>help show
+show [<drive>]
+    Show info for <drive> or current drive
+```
+
+EmuCON is not provided in 192K ROMS. However, you can add it to a disk with the ``emucon-X.Y.zip`` archive.
 
 ## Reporting Bugs
 
