@@ -58,11 +58,37 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 
 Current releases give a detailed compatibility list in the file ``doc/status.txt``.
 
+Getting the current current git repository, or compiling the source.
+
 ## Compatibility
 
 A list of programs that are known to be [incompatible with EmuTOS](https://github.com/emutos/emutos/blob/master/doc/incompatible.txt) is in the source tree. Often, these programs take advantage of undocumented aspects of TOS. These often break on different versions of TOS, sometimes on different languages in the same version of TOS, as well as on EmuTOS. Please check this list before reporting an EmuTOS bug.
 
 Hatari users will find the [Hatari and EmuTOS](https://hatari.tuxfamily.org/doc/emutos.txt) document useful. However, check for the most [recent versions of EmuTOS](https://emutos.sourceforge.io/download.html).
+
+### Available Archives
+
+These are the zip archive files available for download, where X.Y indicates the current release version. See below for how to use some of them. The source is also available from a git repository, which is beyond the scope of this document.
+
+Multi-lingual versions will have multiple files. There are two differences: the language, Czech, French, etc., and the television format (NTSC or PAL) your hardware supports, if any. See the `readme.txt` file in the root directory of the zip file.
+
+| File name | Use |
+|-----------|-----|
+| emucon-X.Y.zip              | EmuCON only as a .prg executable |
+| emutos-192k-X.Y.zip         | 192 kilobyte [Atari ROM](#read-only-memory) image |
+| emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image |
+| emutos-512k-X.Y.zip         | 512 kilobyte [Atari ROM](#read-only-memory) image |
+| emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image |
+| emutos-amiga-rom-X.Y.zip    | [Amiga ROM](#amiga) image |
+| emutos-aranym-X.Y.zip       | Aranym (emulator) image |
+| emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) (EmuCON only) |
+| emutos-firebee-X.Y.zip      | Firebee executable |
+| emutos-floppy-X.Y.zip       | Emutos in an [Atari floppy diskette image](#hard-or-floppy-drive) |
+| emutos-m548x-bas-X.Y.zip    |
+| emutos-m548x-dbug-X.Y.zip   |
+| emutos-pak3-X.Y.zip         |
+| emutos-prg-X.Y.zip          | EmuTOS as an [Atari executable](#hard-or-floppy-drive) |
+| emutos-src-X.Y.tar.gz       | Source code for this version, including some documentation not found elsewhere |
 
 ## Installation
 
@@ -105,7 +131,9 @@ There is also a cartridge version, which goes in the game cartridge on Atari har
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
-### Other Hardware here....
+#### Amiga ####
+
+### Other Hardware
 
 ## Booting
 
