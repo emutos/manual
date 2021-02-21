@@ -15,6 +15,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
     - [Audience](#audience)
         - [What This Manual Covers](#what-this-manual-covers)
         - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
+        - [Typography](#typography)
     - [Compatibility](#compatibility)
         - [Available Archives](#available-archives)
     - [Installation](#installation)
@@ -26,6 +27,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
         - [Amiga](#amiga)
         - [Other Hardware](#other-hardware)
     - [Booting](#booting)
+    - [Rebooting](#rebooting)
     - [The Desktop](#the-desktop)
         - [Minimal Desktop](#minimal-desktop)
         - [Floppy Disk Only Desktop](#floppy-disk-only-desktop)
@@ -61,6 +63,10 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 Current releases give a detailed compatibility list in the file ``doc/status.txt``.
 
 Getting the current current git repository, or compiling the source.
+
+### Typography ###
+
+In this manual, a caret (^) indicates a control character. For example, ^I means hold down a control key and press the i key. The shift key is optional.
 
 ## Compatibility
 
@@ -139,7 +145,7 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 ## Booting
 
-Sucessful initialization will produce a screen similar to this one.
+Successful initialization after power up or a hard reset will produce a screen similar to this one.
 
 ![Screenshot](images/boot.screen.png)
 
@@ -173,6 +179,14 @@ There are a number of features to note about the boot screen.
 
     - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might also be useful for recovering from a boot sequence gone wrong.
 
+## Rebooting ##
+
+There are two ways to reboot EmuTOS. Consult your hardware or emulator documentation for how to achieve them.
+
+A hard reboot clears everything that has been done since power up. This is achieved with the reset button on most hardware. It is comparable to powering down and up again. A [boot screen](#booting) is shown.
+
+A soft reboot stops the current program and returns control to EmuDESK. It may be achieved with Control-Alt-Delete keys. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDESK.
+
 ## The Desktop
 
 ![Screenshot](images/minimal.atari.desktop.mono.png)
@@ -195,11 +209,11 @@ The View menu lets you select how you seen directories. You can also set the bac
 
 ![Screenshot](images/floppy.atari.desktop.mono.png)
 
-If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accomodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory.
+If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accommodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory. You can see how much free memory you have by going to Options -> Desktop configuration.
 
->> We recommend you consider mass storage other than floppy droves. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
+>> We recommend you consider mass storage other than floppy drives. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
 
-Now the File menu is more interesting. You can do a lot of typical file manipilations.
+Now the File menu is more interesting. You can do a lot of typical file manipulations.
 
 > One thing I don't see is the ability to move a file. I see it in EmuCon.
 
@@ -210,23 +224,23 @@ Now the File menu is more interesting. You can do a lot of typical file manipila
 
 Using a new (to you) computer is a bit like moving into a new home. "Where did we put that..." This section will walk you through some typical operations and some things that may make life a bit easier.
 
-Many options also have shortcut keys, e.g. Control S to save the desktop. You can note these to the right of the menu entries.
+Many options also have shortcut keys, e.g. ^S to save the desktop. You can note these to the right of the menu entries.
 
 Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter.
 
 #### Saving the Desktop
 
-As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit Control S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
+As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit ^S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
 
 #### Opening a Disk Drive or Directory
 
-To open a window on a disk drive, double click on its icon. Or hit an Alt key and the drive letter, e.g. Alt g to open G:. To view any directory (folder), double click on its entry. Note that in text view mode, directories are indentified by a small icon to the left of the name of the directory. In icon view mode, they have a manila folder icon, rather than the piece of paper icon files get.
+To open a window on a disk drive, double click on its icon. Or hit an Alt key and the drive letter, e.g. Alt g to open G:. To view any directory (folder), double click on its entry. Note that in text view mode, directories are identified by a small icon to the left of the name of the directory. In icon view mode, they have a manila folder icon, rather than the piece of paper icon files get.
 
 If you save the desktop with windows open to directories, you will preserve those open windows across boots. This is handy for directories you use a lot.
 
-You can select multiple files, directories and disk partitions. If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with Control i. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
+You can select multiple files, directories and disk partitions. If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
 
-You can also select all items (File -> Select All Items, Control a). Having done that, you can then use Shift Click to deselect items.
+You can also select all items (File -> Select All Items, ^A). Having done that, you can then use Shift Click to deselect items.
 
 Folder windows have several widgets of interest.
 
@@ -242,7 +256,7 @@ Folder windows have several widgets of interest.
 
 * To manually re-size, click on the lower right and drag as needed.
 
-* To execute a program, double click on it. If it has the TTP (Tos Takes Parameters) extensions, EmuTOS will ask for parameters. Clicking on the OK button or hitting the Return or Enter key will execute the program with whatever parameters you have given it. If the program is of type PRG, EmuTOS will simply execute it.
+* To execute a program, double click on it. If it has the TTP (TOS Takes Parameters) extensions, EmuTOS will ask for parameters. Clicking on the OK button or hitting the Return or Enter key will execute the program with whatever parameters you have given it. If the program is of type PRG, EmuTOS will simply execute it.
 
 * To display any non-program file, double click on it. You can send it to your printer. Or you can show it. EmuTOS will display it one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q bails out of showing the file.
 
@@ -253,9 +267,11 @@ To create a new folder, File -> New Folder (^N).
 
 #### File Information
 
-EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked hidden, system, and read-only.
+EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked h, for hidden; s, for system; and r, for read-only.
 
-The File Information dialog (File -> Info/Rename, Control I) will show you its name (with the option to change it), size, date and time, and whether a file is read-write or read only.
+There is also an archive flag. When set, this file has been changed since the last archive was made. Backup software can use this bit to archive only changed files, and then reset the flag. But neither EmuDESK nor EmuCON will allow you to edit this flag.
+
+The File Information dialog (File -> Info/Rename, ^I) will show you its name (with the option to change it), size, date and time, and whether a file is read-write or read only.
 
 If you are looking at a folder (directory), the dialog will show you the number of files and folders within it, as well as the time and date.
 
@@ -269,14 +285,14 @@ You can set the mask for displaying files in the folder windows: File -> Set fil
 
 ### Control Panel eXtensions
 
-Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are availabe in some versions of TOS, and in EmuTOS.
+Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are available in some versions of TOS, and in EmuTOS.
 
 
 ## EmuCON
 
 EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.
 
-It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works, although not to the extent of a full-up Unix shell. MS-DOS style wild cards also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
+It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works for standard out, but not for standard in or standard error. MS-DOS style wild cards also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
 
 ```
 C:\>echo foo > bar.txt
@@ -296,22 +312,22 @@ The built-in commands are:
 |-----------|-------|
 | cat/type  | Show a file. Like ``cat`` and  ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
 | cd        | Change directory. If you begin with a drive letter, e.g. ``D:``, you can change to a different partition. |
-| chmod     | Change the permissions on a file. These are the FAT permissions: hidden, system, and read-only. Use MS-DOS syntax for the permissions, not Unix. |
+| chmod     | Change the permissions on a file. These are the FAT permissions: h, for hidden; s, for system; and r, for read-only. Use MS-DOS syntax for the permissions, not Unix. |
 | cls/clear | Clear the screen and home the cursor. |
 | cp/copy   | Copy a file. See ``mv``/``move`` below. |
 | echo      | Sends everything after it on the line to the display. |
 | exit      | Leave EmuCON. |
 | help      | Show a list of built in commands (this table). Given a command as an argument, show a brief summary of that command's usage. |
-| ls/dir    | Show a directory listing. Given a path, display that file or directory. |
+| ls/dir    | Show a directory listing. Given a path, display that file or directory. Unlike EmuDESK, EmuCON's ls will show hidden files. |
 | mkdir/md  | Make a directory. |
 | mode      | Set characteristics of the "terminal", e.g. screen resolution. |
 | more      | Display a file one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q or ^C bails out of showing the file. |
 | mv/move   | Move a file. See also ``cp``/``copy`` above. |
-| path      | Set a search path, analogous to the PATH environment string in DOS or Unix. |
+| path      | Set a search path, analogous to the PATH environment string in DOS or Unix. You may specify multiple folders separated by a semicolon (;). |
 | pwd       | Print the working (current) directory. |
-| ren       | Rename (move within the working directory). |
+| ren       | Rename (move within the working directory). It will not rename directories on versions of GEMDOS less than 0.15 due to a bug in those versions of GEMDOS. |
 | rm/del    | Remove or delete the given file(s), but not directories. |
-| rmdir/rd  | Remove or delete the given directories. |
+| rmdir/rd  | Remove or delete the given empty directories. |
 | show      | Show information about the given drive. |
 | version   | Show the current version of GEMDOS (not the same as the current version of EmuTOS). |
 | wrap      | Turn screen wrapping on or off, or show its current state. |
