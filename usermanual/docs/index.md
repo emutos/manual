@@ -122,9 +122,9 @@ No-one at Atari anticipated that thirty years on people would still be hacking A
 
 #### Hard or Floppy Drive
 
-Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``C:\AUTO``. The prg version of EmuTOS provides an executable, ``emutos*.prg``, which you can copy into ``C:\AUTO``. Or you can put it any place convenient, and launch it at will.
+Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``C:\AUTO``. The prg version of EmuTOS provides an executable, ``EMUTOS*.PRG``, which you can copy into ``C:\AUTO``. Or you can put it any place convenient, and launch it at will.
 
-The floppy version of EmuTOS provides a floppy disk image with a hidden ``.sys`` file in its root directory.
+The floppy version of EmuTOS provides a floppy disk image with a hidden ``.SYS`` file in its root directory.
 
 This is slower than booting from [ROM](#rom) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
 
@@ -243,10 +243,6 @@ To open a window on a disk drive, double click on its icon. Or hit an Alt key an
 
 If you save the desktop with windows open to directories, you will preserve those open windows across boots. This is handy for directories you use a lot.
 
-You can select multiple files, directories and disk partitions. If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
-
-You can also select all items (File -> Select All Items, ^A). Having done that, you can then use Shift Click to deselect items.
-
 Folder windows have several widgets of interest.
 
 * Scroll bars on the right and bottom allow scrolling. Click on the scroll bar for gross movement, or on the arrows at the ends of the scroll bar for fine movement.
@@ -267,8 +263,15 @@ Folder windows have several widgets of interest.
 
 To create a new folder, File -> New Folder (^N).
 
+#### File Selection ####
 
+You can select one file by clicking on it. Select multiple files within the same window by selecting the first, then hold the shift key down while you click on other files (Shift Click). There is no way to select a range of files. You can narrow the visible files by [setting the file mask](#file-mask). You can select all the files in the current window with File -> Select All Items (^A). Having done that, you can then use Shift Click to deselect items.
 
+If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
+
+#### Copying and Moving Files ####
+
+Once you have selected one or more files, you can copy them to another window by dragging them to the new window. You can move them by holding down the control key while you drag.
 
 #### File Information
 
