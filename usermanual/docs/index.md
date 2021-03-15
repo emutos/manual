@@ -168,7 +168,7 @@ There are a number of features to note about the boot screen.
 
 - How much main memory was found.
 
-- An enumeration of the floppy drives (A and B) and hard drive partitions found.
+- An enumeration of the floppy drives (A and B) and hard drive partitions found. The boot drive is in reverse video.
 
 - The time and date of the boot if EmuTOS finds a real-time clock. If no real-time clock is found, a bogus time and date will be shown in reverse video.
 
