@@ -1,3 +1,5 @@
+![EmuTOS Users Manual cover](images/emutos.users.manual.cover.png "EmuTOS Users Manual cover")
+
 # The EmuTOS User Manual
 
 Welcome!
@@ -43,6 +45,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
     - [Reporting Bugs](#reporting-bugs)
     - [Glossary](#glossary)
     - [Resources](#resources)
+    - [Credits](#credits)
 
 <!-- markdown-toc end -->
 
@@ -147,7 +150,7 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 Successful initialization after power up or a hard reset will produce a screen similar to this one.
 
-![Screenshot](images/boot.screen.png)
+![EmuTOS boot screen](images/boot.screen.png "EmuTOS boot screen")
 
 *Above: EmuTOS boot screen on an RGB screen*
 
@@ -189,7 +192,7 @@ A soft reboot stops the current program and returns control to EmuDESK. It may b
 
 ## The Desktop
 
-![Screenshot](images/minimal.atari.desktop.mono.png)
+![Minimal EmuTOS desktop](images/minimal.atari.desktop.mono.png "Minimal EmuTOS desktop")
 
 *Above: EmuTOS minimal desktop screen on a monochrome screen*
 
@@ -207,7 +210,9 @@ The View menu lets you select how you seen directories. You can also set the bac
 
 ### Floppy Disk Only Desktop
 
-![Screenshot](images/floppy.atari.desktop.mono.png)
+![Floppy Desktop](images/floppy.atari.desktop.mono.png "Floppy Desktop")
+
+*Above: EmuTOS minimal desktop screen with a floppy disk icon visible.*
 
 If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accommodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory. You can see how much free memory you have by going to Options -> Desktop configuration.
 
@@ -365,3 +370,7 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 Also see the [EmuTOS links page](https://emutos.sourceforge.io/links.html).
 
 * The [EmuTOS web site](https://emutos.sourceforge.io/).
+
+## Credits ##
+
+"Cover" artwork courtesy of the [O RLY Cover Generator](https://dev.to/rly "O RLY Cover Generator").
