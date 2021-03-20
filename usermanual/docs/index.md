@@ -1,5 +1,3 @@
-![EmuTOS Users Manual cover](images/emutos.users.manual.cover.png "EmuTOS Users Manual cover")
-
 # The EmuTOS User Manual
 
 Welcome!
