@@ -371,3 +371,5 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 Also see the [EmuTOS links page](https://emutos.sourceforge.io/links.html).
 
 * The [EmuTOS web site](https://emutos.sourceforge.io/).
+
+* The [EmuTOS mailing list](https://sourceforge.net/p/emutos/mailman/emutos-devel/ "EmuTOS mailing list").
