@@ -172,7 +172,7 @@ There are a number of features to note about the boot screen.
 
 - Some useful functions:
 
-    - Hold a control key down to bypass the ``C:\AUTO`` directory and installing accessories. This is useful for debugging complicated boot sequences.
+    - Hold a control key down to bypass the ``C:\AUTO`` directory and installing [accessories](#desktop-accessories). This is useful for debugging complicated boot sequences.
 
     - Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from ROM.
 
@@ -289,6 +289,8 @@ You can set the mask for displaying files in the folder windows: File -> Set fil
 
 ### Desktop Accessories ###
 
+Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot. To deactivate, rename the file and move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
+
 ### Control Panel eXtensions ###
 
 Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are available in some versions of TOS, and in EmuTOS.
@@ -346,7 +348,7 @@ show [<drive>]
     Show info for <drive> or current drive
 ```
 
-EmuCON is not provided in 192K ROMS. However, you can add it to a disk with the ``emucon-X.Y.zip`` archive.
+EmuCON is not provided in 192K ROMS. However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
 
 ## Reporting Bugs ##
 
