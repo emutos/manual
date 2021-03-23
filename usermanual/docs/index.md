@@ -93,7 +93,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | emutos-aranym-X.Y.zip       | Aranym (emulator) image |
 | emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) (EmuCON only) |
 | emutos-firebee-X.Y.zip      | Firebee executable |
-| emutos-floppy-X.Y.zip       | Emutos in an [Atari floppy diskette image](#hard-or-floppy-drive) |
+| emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive) |
 | emutos-m548x-bas-X.Y.zip    |
 | emutos-m548x-dbug-X.Y.zip   |
 | emutos-pak3-X.Y.zip         |
@@ -201,7 +201,7 @@ A soft reboot stops the current program and returns control to EmuDESK. It may b
 
 If you have a minimal Atari system, this screen shot is what you will see: a plain desktop. It's not very interesting. Still, a few things to note.
 
-You can bring the mouse pointer up to the Desk entry in the navigation bar. That will show you the Desk menu, with one entry: "Desktop info...". Click on that to see information about Emutos, including the version number.
+You can bring the mouse pointer up to the Desk entry in the navigation bar. That will show you the Desk menu, with one entry: "Desktop info...". Click on that to see information about EmuTOS, including the version number.
 
 The File menu will let you format a floppy, which isn't very useful without a floppy drive. It will also let you enter [EmuCON](#emucon). If [NatFeats](#natfeats) are enabled, you can use the last entry to power off your computer (or exit your emulator).
 
