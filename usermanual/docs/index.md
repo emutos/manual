@@ -17,9 +17,9 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
         - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
         - [Typography](#typography)
     - [Compatibility](#compatibility)
+    - [Getting EmuTOS](#getting-emutos)
         - [Available Archives](#available-archives)
     - [Installation](#installation)
-        - [Getting EmuTOS](#getting-emutos)
         - [Atari](#atari)
             - [Hard or Floppy Drive](#hard-or-floppy-drive)
             - [Read Only Memory](#read-only-memory)
@@ -76,7 +76,17 @@ A list of programs that are known to be [incompatible with EmuTOS](https://githu
 
 Hatari users will find the [Hatari and EmuTOS](https://hatari.tuxfamily.org/doc/emutos.txt) document useful. However, check for the most [recent versions of EmuTOS](https://emutos.sourceforge.io/download.html).
 
-### Available Archives
+## Getting EmuTOS
+
+You can get the current release from the [EmuTOS web site](https://emutos.sourceforge.io/download.html). There are many files available for each version. Which one you want depends on the hardware you are using. For example, emutos-aranym-*.zip files are for the aranym emulator.
+
+We highly recommend testing the zip file after you pull it in, especially if you aren't going to use it immediately. E.g. on Linux:
+
+```
+unzip -t file-name
+```
+
+### Available Archives ###
 
 These are the zip archive files available for download, where X.Y indicates the current release version. See below for how to use some of them. The source is also available from a git repository, which is beyond the scope of this document.
 
@@ -103,17 +113,6 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 ## Installation
 
 In many cases, installation of a new operating system is covered by the hardware documentation.
-
-### Getting EmuTOS
-
-You can get the current release from the [EmuTOS web site](https://emutos.sourceforge.io/download.html). There are many files available for each version. Which one you want depends on the hardware you are using. For example, emutos-aranym-*.zip files are for the aranym emulator.
-
-We highly recommend testing the zip file after you pull it in, especially if you aren't going to use it immediately. E.g. on Linux:
-
-```
-unzip -t file-name
-```
-
 
 ### Atari
 
