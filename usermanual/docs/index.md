@@ -289,7 +289,11 @@ You can set the mask for displaying files in the folder windows: File -> Set fil
 
 ### Desktop Accessories ###
 
-Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot. To deactivate, rename the file and move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
+Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot.
+
+To deactivate, rename the file and move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
+
+**Note** Desktop accessories take up memory even when you aren't using them. Choose wisely.
 
 ### Control Panel eXtensions ###
 
