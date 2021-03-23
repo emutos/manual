@@ -35,6 +35,8 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
         - [Using the Desktop](#using-the-desktop)
             - [Saving the Desktop](#saving-the-desktop)
             - [Opening a Disk Drive or Directory](#opening-a-disk-drive-or-directory)
+            - [File Selection](#file-selection)
+            - [Copying and Moving Files](#copying-and-moving-files)
             - [File Information](#file-information)
             - [File Mask](#file-mask)
         - [Desktop Accessories](#desktop-accessories)
@@ -43,7 +45,6 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
     - [Reporting Bugs](#reporting-bugs)
     - [Glossary](#glossary)
     - [Resources](#resources)
-    - [Credits](#credits)
 
 <!-- markdown-toc end -->
 
@@ -371,7 +372,3 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 Also see the [EmuTOS links page](https://emutos.sourceforge.io/links.html).
 
 * The [EmuTOS web site](https://emutos.sourceforge.io/).
-
-## Credits ##
-
-"Cover" artwork courtesy of the [O RLY Cover Generator](https://dev.to/rly "O RLY Cover Generator").
