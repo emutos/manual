@@ -36,9 +36,16 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
             - [Saving the Desktop](#saving-the-desktop)
             - [Opening a Disk Drive or Directory](#opening-a-disk-drive-or-directory)
             - [File Selection](#file-selection)
-            - [Copying and Moving Files](#copying-and-moving-files)
+            - [Manipulating Files and Directories](#manipulating-files-and-directories)
             - [File Information](#file-information)
             - [File Mask](#file-mask)
+        - [Customizing the Desktop](#customizing-the-desktop)
+            - [Add an Icon](#add-an-icon)
+            - [Add an Application](#add-an-application)
+            - [Restoring Your Desktop](#restoring-your-desktop)
+            - [Preferences](#preferences)
+            - [Desktop configuration](#desktop-configuration)
+            - [Blitter](#blitter)
         - [Desktop Accessories](#desktop-accessories)
         - [Control Panel eXtensions](#control-panel-extensions)
     - [EmuCON](#emucon)
@@ -212,7 +219,7 @@ The View menu lets you select how you seen directories. You can also set the bac
 
 *Above: EmuTOS minimal desktop screen with a floppy disk icon visible.*
 
-If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accommodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory. You can see how much free memory you have by going to Options -> Desktop configuration.
+If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accommodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory. You can see how much free memory you have by going to Options -> [Desktop configuration](#desktop-configuration).
 
 >> We recommend you consider mass storage other than floppy drives. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
 
@@ -259,7 +266,7 @@ Folder windows have several widgets of interest.
 
 * To display any non-program file, double click on it. You can send it to your printer. Or you can show it. EmuTOS will display it one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q bails out of showing the file.
 
-To create a new folder, File -> New Folder (^N).
+* If you have multiple windows open, you can cycle through all of them with File -> Cycle windows (^W). On a crowded desktop, this is a great convenience.
 
 #### File Selection ####
 
@@ -267,9 +274,21 @@ You can select one file by clicking on it. Select multiple files within the same
 
 If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
 
-#### Copying and Moving Files ####
+#### Manipulating Files and Directories ####
 
 Once you have selected one or more files, you can copy them to another window by dragging them to the new window. You can move them by holding down the control key while you drag.
+
+* To create a new folder, File -> New Folder (^N).
+
+* To search for an item in the current window, File -> Search (^F).
+
+* To close a window using the GUI, you have to click repeatedly on the upper left widget in the window, once for each level in the directory tree. Instead, use File -> Close top window (^U). Or you can close the current folder and go up a level with File -> Close folder (^H).
+
+* You can delete a file, a directory or recursively delete a whole directory tree. Select the item to delete. You can then drag it to the trash icon, or use file -> Delete (^D).
+
+**Note** Be careful with deletion! There is no "undo".
+
+Note that the old standby ^C (for copy) and ^P (for paste) don't work for copying files or directories.
 
 #### File Information ####
 
@@ -286,6 +305,50 @@ For partitions or floppy diskettes, you will see the drive identifier (e.g. A fo
 #### File Mask ####
 
 You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional wild cards, * (many characters) and ? (one character), work. The title bar shows the file mask.
+
+### Customizing the Desktop ###
+
+Use the Options menu to customize the desktop.
+
+#### Add an Icon ####
+
+To add icons to your desktop or edit existing ones, use Options -> Install Icon... . Note that for drive icons, the identifier is one capital letter, for example, Z. You can also add or edit the label. So instead of "Disk J", you can have "Development" for your software development drive. These can be aliases of the existing lettered drives, so that, say, "DISK C" and "Development" open the same drive. Depending on the icon you select, the drive letter (if any) may show up above and to the left of the icon.
+
+#### Add an Application ####
+
+You can set up a application as a desktop icon. Select the executable. Then select Options -> Install application... . Supply any command line arguments. "Install as" lets you assign a keystroke to the application, such as function key 1, F1.
+
+To associate an extension with a given application, enter that extension in the "Document type". For example, if you have a text editor, you can enter TXT there. Then clicking on any file with that extension will fire up the application and EmuTOS will give that application the file you clicked on as its first command line argument.
+
+You can set the defaults for some of this with the [Desktop configuration](#desktop-configuration) dialog.
+
+#### Restoring Your Desktop ####
+
+If you do lots of experiments and end up with a cluttered desktop, you can get back to your original desktop by rebooting. A much faster way to restore your desktop to its last saved state is to re-read the appropriate ``C:\*.INF`` file. Options -> Read .INF file...
+
+This also lets you have multiple desktops. The easiest way to have multiple desktops is to keep them in ``C:\`` and use the extension ``.INF``. ``GAMES.INF``, ``DEVEL.INF``, and so on, limited only by the eight characters in the base part of the file name.
+
+> I could use more infomation here. What do the other options do?
+
+#### Preferences ####
+
+Use the Options -> Set preferences... dialog to have GEM confirm file deletions, copies or overwrites.
+
+Select More preferences to set how quickly GEM decides you have double clicked on something rather than two separate clicks, whether you have to click on a menu to get it or just mouse over it, and the time and date formats.
+
+#### Desktop configuration ####
+
+> What do the two top radio buttons here do?
+
+In the process of [adding an application](#add-an-application) to the desktop, you can assign a function key to it. You can inspect change those assignments.
+
+You can re-assign shortcut keys to menu entries.
+
+Finally, the Desktop Configuration shows you how much free RAM you have available.
+
+#### Blitter ####
+
+The menu option Options -> Blitter lets you turn on or off the blitter chip, if you have one. Some programs (typically games) have problems with the blitter, so turning it off can help those programs.
 
 ### Desktop Accessories ###
 
