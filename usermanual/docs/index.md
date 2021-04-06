@@ -221,11 +221,9 @@ The View menu lets you select how you seen directories. You can also set the bac
 
 If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accommodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory. You can see how much free memory you have by going to Options -> [Desktop configuration](#desktop-configuration).
 
->> We recommend you consider mass storage other than floppy drives. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
+**Note** We recommend you consider mass storage other than floppy drives. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
 
 Now the File menu is more interesting. You can do a lot of typical file manipulations.
-
-> One thing I don't see is the ability to move a file. I see it in EmuCon.
 
 ### Hard Drive ###
 
