@@ -328,7 +328,7 @@ If you do lots of experiments and end up with a cluttered desktop, you can get b
 
 This also lets you have multiple desktops. The easiest way to have multiple desktops is to keep them in ``C:\`` and use the extension ``.INF``. ``GAMES.INF``, ``DEVEL.INF``, and so on, limited only by the eight characters in the base part of the file name.
 
-> I could use more infomation here. What do the other options do?
+> I could use more information here. What do the other options do?
 
 #### Preferences ####
 
@@ -433,7 +433,7 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 * <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
 
-* <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font suport, and handles user events such as mouse clicks.
+* <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font support, and handles user events such as mouse clicks.
 
 ## Resources ##
 
