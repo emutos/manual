@@ -46,6 +46,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
             - [Preferences](#preferences)
             - [Desktop configuration](#desktop-configuration)
             - [Blitter](#blitter)
+            - [Cache](#cache)
         - [Desktop Accessories](#desktop-accessories)
         - [Control Panel eXtensions](#control-panel-extensions)
     - [EmuCON](#emucon)
@@ -102,7 +103,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | File name | Use |
 |-----------|-----|
 | emucon-X.Y.zip              | EmuCON only as a .prg executable |
-| emutos-192k-X.Y.zip         | 192 kilobyte [Atari ROM](#read-only-memory) image |
+| emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image |
 | emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image |
 | emutos-512k-X.Y.zip         | 512 kilobyte [Atari ROM](#read-only-memory) image |
 | emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image |
@@ -139,7 +140,7 @@ Get the emutos-prg-\*.zip or emutos-floppy-\* zip file. See the readme.txt file 
 
 Almost all Atari STs came with TOS in [read only memory (ROM)](#rom). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#eprom)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
 
-Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation. Note that the 192K ROMs do not provide [EmuCON](#emucon), so you may prefer the 256K or 512K ROMs if your hardware will support them. However, you can add it to a disk with the ``emucon-X.Y.zip`` archive.
+Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation. Note that the 192K ROMs do not provide [EmuCON](#emucon) or a number of desktop features, so you may prefer the 256K or 512K ROMs if your hardware will support them. However, you can add EmuCON to a disk with the ``emucon-X.Y.zip`` archive.
 
 #### Cartridge ####
 
@@ -191,9 +192,11 @@ There are a number of features to note about the boot screen.
 
 There are two ways to reboot EmuTOS. Consult your hardware or emulator documentation for how to achieve them.
 
-A hard reboot clears everything that has been done since power up. This is achieved with the reset button on most hardware. It is comparable to powering down and up again. A [boot screen](#booting) is shown.
+A hard reboot clears everything that has been done since power up. A hard reboot is comparable to powering down and up again. This is achieved with the reset button on most hardware.
 
-A soft reboot stops the current program and returns control to EmuDESK. It may be achieved with Control-Alt-Delete keys. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDESK.
+In EmuTOS, as in some versions of TOS, you can achieve a hard reboot with Ctrl-Alt-Shift-Delete. A [boot screen](#booting) is shown. A hard reboot returns to ROM, so if you are running EmuTOS from a disk drive, you will have to launch it again from whatever OS is in ROM.
+
+A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDESK. It may be achieved with Control-Alt-Delete keys. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDESK.
 
 ## The Desktop ##
 
@@ -201,7 +204,11 @@ A soft reboot stops the current program and returns control to EmuDESK. It may b
 
 *Above: EmuTOS minimal desktop screen on a monochrome screen*
 
-> I note the printer icon even though I configured Hatari not to have a printer. Is that correct? Should EmuTOS show a ghost printer?
+EmuDesk implements all of the features of the Atari TOS 2/3/4 desktop. And it has features TOS does not have.
+
+Due to space limitations, the desktop implementation is somewhat restricted in the 192K ROMs. For the gory details, see the file ``doc/emudesk.txt`` in the archive.
+
+If you make any changes to the desktop using the above features, you must save the desktop to preserve the changes.
 
 ### Minimal Desktop ###
 
@@ -213,13 +220,15 @@ The File menu will let you format a floppy, which isn't very useful without a fl
 
 The View menu lets you select how you seen directories. You can also set the background and you can set a number of other preferences. You can also read a ``*.INF`` file, which is a desktop information file, similar to the Atari TOS ``DESKTOP.INF`` file. EmuTOS uses ``EMUDESK.INF``.
 
+**Note** EmuTOS will always create a printer and trash icon if it does not see ``EMUDESK.INF``. If you don't have a printer, the icon is harmless, and you can always remove it. If you do, save your desktop.
+
 ### Floppy Disk Only Desktop ###
 
 ![Floppy Desktop](images/floppy.atari.desktop.mono.png "Floppy Desktop")
 
 *Above: EmuTOS minimal desktop screen with a floppy disk icon visible.*
 
-If we add one floppy disk drive to the system, we get two floppy disk icons on the desktop. EmuTOS supports emulating floppy drive B: in physical floppy drive A:. This lets you copy floppies. It can be a bit awkward unless you have enough memory to accommodate an entire floppy disk in one go. E.g.: An Atari double sided double density floppy drive, like the Atari SF314 external floppy drive, has 720 kilobytes, so you would need at least 1 megabyte of memory. You can see how much free memory you have by going to Options -> [Desktop configuration](#desktop-configuration).
+If we have one floppy disk drive, we get one floppy disk icon on the desktop. Unlike TOS, EmuTOS does not support emulating floppy drive B: in physical floppy drive A:. Again, unlike TOS, if you have only one floppy drive, you will see only one floppy drive icon.
 
 **Note** We recommend you consider mass storage other than floppy drives. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
 
@@ -234,7 +243,7 @@ Using a new (to you) computer is a bit like moving into a new home. "Where did w
 
 Many options also have shortcut keys, e.g. ^S to save the desktop. You can note these to the right of the menu entries.
 
-Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter.
+Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter. It will install icons on the desktop for the drives it recognizes.
 
 #### Saving the Desktop ####
 
@@ -280,6 +289,14 @@ Once you have selected one or more files, you can copy them to another window by
 
 * To search for an item in the current window, File -> Search (^F).
 
+    This prompts for a search string, then searches for matching files and folders.  The search string entered is not the usual TOS [wildcard](#wildcards) specification: any characters you enter must be matched, but missing characters are ignored, i.e. are treated as though they were wildcards. For example, searching for "A.T" will match "A.T", "ABC.TTP", etc. To search for "A.T", you would enter exactly that. Entering the period moves to the extension part of the file name. So "A.T" is the equivalent of "A\*.T\*.
+
+    If there are no icons currently selected, Search just selects all matching files and folders in the topmost window, and the search ends.
+
+    Otherwise, the folders corresponding to the selected icons are searched recursively, in sequence.  If a folder contains a matching name, the folder is displayed in a window, with the matched files selected, and the user is prompted to continue to search or cancel.
+
+    If cancel is selected, the search ends, with the window showing the most-recently-matched files; otherwise, the search continues.  When all folders have been searched, an alert is displayed: either "No more files" if at least one file was found, or "xxx not found" if no matching files were found.
+
 * To close a window using the GUI, you have to click repeatedly on the upper left widget in the window, once for each level in the directory tree. Instead, use File -> Close top window (^U). Or you can close the current folder and go up a level with File -> Close folder (^H).
 
 * You can delete a file, a directory or recursively delete a whole directory tree. Select the item to delete. You can then drag it to the trash icon, or use file -> Delete (^D).
@@ -314,15 +331,25 @@ To add icons to your desktop or edit existing ones, use Options -> Install Icon.
 
 #### Add an Application ####
 
-You can set up a application as a desktop icon. Select the executable. Then select Options -> Install application... . Supply any command line arguments. "Install as" lets you assign a keystroke to the application, such as function key 1, F1.
+You can set up one or more applications as desktop icons. Select the executables. Then select Options -> Install application... . Supply any command line arguments.
 
-To associate an extension with a given application, enter that extension in the "Document type". For example, if you have a text editor, you can enter TXT there. Then clicking on any file with that extension will fire up the application and EmuTOS will give that application the file you clicked on as its first command line argument.
+To associate an extension with a given application, enter that extension in the "Document type". For example, if you have a text editor, you can enter TXT there. Then clicking on any file with that extension will fire up the application and EmuTOS will give that application the file you clicked on as its first command line argument. [Wild cards](#wildcards) are allowed. Entering * or ??? will make this application the default viewer for file types not otherwise associated with an application.
+
+"Install as" lets you assign a keystroke to the application, such as function key 1, F1. Accepted values are 1 to 20, where 1 to ten is the function key with no modifier keys, and 11 to 20 indicate shifted function keys. So 12 indicates Shift-F2.
+
+"Boot status": Select "Auto" to autoboot this application (see above). Since only one autoboot application is allowed, if you set "Auto" for an application, EmuTOS will automatically disable "Auto" for any existing autoboot application.
+
+"Application type": Selecting TOS or TTP will launch the program in character mode; GEM or GTP will launch the application in graphics mode. The appropriate value will be prefilled according to the type of application selected, and you should not normally change it.
+
+"Default dir" specifies the default directory when the application is launched: either the directory of the application itself, or the top window (i.e. the directory of the data file). The one to choose depends on the specific application. If the application has supporting files (such as resource or help files), it typically will look for them in the default directory. For such an application, you will need to specify a default directory of "Application". Otherwise, specify "Window".
+
+When a program is launched due to it being an installed application, the desktop provides the application with the name of the data file that caused the launch: this is known as a parameter. In most cases, the application expects that the full path of the data file will be provided. Some (usually older) programs may expect the filename only. Unless the application's documentation indicates otherwise, you should normally try "Full path" first; if that does not work, you can try "File name", although that may require you to modify the "Default dir" specified above.
 
 You can set the defaults for some of this with the [Desktop configuration](#desktop-configuration) dialog.
 
 #### Restoring Your Desktop ####
 
-If you do lots of experiments and end up with a cluttered desktop, you can get back to your original desktop by rebooting. A much faster way to restore your desktop to its last saved state is to re-read the appropriate ``C:\*.INF`` file. Options -> Read .INF file...
+If you do lots of experiments and end up with a cluttered desktop, you can get back to your original desktop by [rebooting](#rebooting). A much faster way to restore your desktop to its last saved state is to re-read the appropriate ``C:\*.INF`` file. Options -> Read .INF file...
 
 This also lets you have multiple desktops. The easiest way to have multiple desktops is to keep them in ``C:\`` and use the extension ``.INF``. ``GAMES.INF``, ``DEVEL.INF``, and so on, limited only by the eight characters in the base part of the file name.
 
@@ -338,7 +365,7 @@ Select More preferences to set how quickly GEM decides you have double clicked o
 
 > What do the two top radio buttons here do?
 
-In the process of [adding an application](#add-an-application) to the desktop, you can assign a function key to it. You can inspect change those assignments.
+In the process of [adding an application](#add-an-application) to the desktop, you can assign a function key to it. You can inspect and change those assignments. Accepted values are 1 to 20, where 1 to ten is the function key with no modifier keys, and 11 to 20 indicate shifted function keys. So 12 indicates Shift-F2.
 
 You can re-assign shortcut keys to menu entries.
 
@@ -348,11 +375,15 @@ Finally, the Desktop Configuration shows you how much free RAM you have availabl
 
 The menu option Options -> Blitter lets you turn on or off the blitter chip, if you have one. Some programs (typically games) have problems with the blitter, so turning it off can help those programs.
 
+#### Cache ####
+
+If your processor has a hardware cache, you can disable and enable it here. If not, this menu entry is greyed out.
+
 ### Desktop Accessories ###
 
 Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot.
 
-To deactivate, rename the file and move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
+To deactivate, rename the file or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
 
 **Note** Desktop accessories take up memory even when you aren't using them. Choose wisely.
 
@@ -360,6 +391,7 @@ To deactivate, rename the file and move it to a different directory, then reboot
 
 Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are available in some versions of TOS, and in EmuTOS.
 
+The Control Pannel is a special type of accessory that was originally provided by Atari. However, third-party versions are also available.
 
 ## EmuCON ##
 
@@ -432,6 +464,8 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 * <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
 
 * <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font support, and handles user events such as mouse clicks.
+
+* <a id="wildcards"></a>Wild card: A wild card lets you select multiple characters, and in EmuTOS they are often used in file selections. EmuTOS allows two wild cards. * means the file selection software will accept any legal character from this position to the end of the field. So ``*.WPF`` would find all files with that extension. ? is a wild card for that one character position. So ``A?C.C`` would select all files that have a three letter name with A in the first place, any character in the second, C in the third place, no other characters in the name, and an extension of "C". 
 
 ## Resources ##
 
