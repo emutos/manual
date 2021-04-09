@@ -319,7 +319,7 @@ For partitions or floppy diskettes, you will see the drive identifier (e.g. A fo
 
 #### File Mask ####
 
-You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional wild cards, * (many characters) and ? (one character), work. The title bar shows the file mask.
+You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional [wild cards](#wildcards) work. The title bar shows the file mask.
 
 ### Customizing the Desktop ###
 
@@ -397,7 +397,7 @@ The Control Pannel is a special type of accessory that was originally provided b
 
 EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.
 
-It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works for standard out, but not for standard in or standard error. MS-DOS style wild cards also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
+It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works for standard out, but not for standard in or standard error. [Wild cards](#wildcards) also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
 
 ```
 C:\>echo foo > bar.txt
