@@ -88,7 +88,7 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 | license.txt | The GNU General Public License, Version 2, June 1991 |
 | status.txt | The status of EmuTOS support for various bits of hardware and emulators. Please read before you file a [bug report](#reporting-bugs). |
 | todo.txt | Things to do. Volunteers are welcome. |
-| xhdi.txt | |
+| xhdi.txt | Notes on when ceratin entities were available in TOS, and their status under EmuTOS. |
 
 Current releases give a detailed compatibility list in the file ``doc/status.txt``.
 
