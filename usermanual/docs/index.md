@@ -11,6 +11,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
 
 - [The EmuTOS User Manual](#the-emutos-user-manual)
     - [Table of Contents](#table-of-contents)
+    - [Introduction](#introduction)
     - [License](#license)
     - [Audience](#audience)
         - [What This Manual Covers](#what-this-manual-covers)
@@ -56,6 +57,10 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
 
 <!-- markdown-toc end -->
 
+## Introduction ##
+
+EmuTOS is a single-user single-tasking operating system for 32-bit Atari computers, clones and emulators. It can be used as a replacement for the TOS images typically needed by emulators and can also run on some real hardware, including the Atari ST(e), TT, and Falcon, and the FireBee. It can even run on non-Atari hardware such as Amiga and ColdFire Evaluation Boards. All the source code is open and free, licensed under the GNU General Public License (GPL).
+
 ## License ##
 
 Erm, what is our license here? Gnu FDL? Creative Commons License?
@@ -69,6 +74,21 @@ This manual is for EmuTOS users. For more on EmuTOS, see the [web site](https://
 ### What This Manual Doesn't Cover ###
 
 Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
+
+<a id="docFiles"></a>There is a directory in the distribution (see [Getting EmuTOS](#getting-emutos)), ``/doc``, which has more documentation.
+
+| File | Description |
+|-----------|-----|
+| announce.txt | A summary of EmuTOS, including more technical information that what is here. |
+| authors.txt | Contributors to EmuTOS and a wee bit of the history. |
+| bugs.txt | A list of known bugs, including bugs that are know to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
+| changelog.txt | Changes from release 0.9.4 until the current version. |
+| emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not or partially implemented in the 192KB ROMs. Also some information on advanced features not covered here, such as user-assignable icons. |
+| incompatible.txt | A list of programs incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
+| license.txt | The GNU General Public License, Version 2, June 1991 |
+| status.txt | The status of EmuTOS support for various bits of hardware and emulators. Please read before you file a [bug report](#reporting-bugs). |
+| todo.txt | Things to do. Volunteers are welcome. |
+| xhdi.txt | |
 
 Current releases give a detailed compatibility list in the file ``doc/status.txt``.
 
@@ -449,7 +469,7 @@ EmuCON is not provided in 192K ROMS. However, you can add it to a disk with the 
 
 ## Reporting Bugs ##
 
-Before you report a bug, you should probably search the EmuTOS [development mailing list's archives](https://sourceforge.net/p/emutos/mailman/emutos-devel/) to see if anyone else has reported your problem or something similar, and a possible solution.
+Before you report a bug, you should search the EmuTOS [development mailing list's archives](https://sourceforge.net/p/emutos/mailman/emutos-devel/) to see if anyone else has reported your problem or something similar, and a possible solution. You should also check certain [documentation files](#docFiles) in the most recent distribution or the git repository.
 
 To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [development mailing list](https://sourceforge.net/projects/emutos/lists/emutos-devel). There are other, deprecated, ways to file bugs, but this allows anyone to join the discussion, and will usually get a faster response.
 
