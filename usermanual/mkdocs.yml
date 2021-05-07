@@ -19,3 +19,15 @@ copyright: Copyright &copy; 2021 through the most recent change by the respectiv
 markdown_extensions:
     - toc:
         permalink: true
+
+# from https://github.com/apenwarr/mkdocs-exclude
+plugins:
+  - exclude:
+      glob:
+        # - exclude/this/path/*
+        # - "*.tmp"
+        # - "*.pdf"
+        # - "*.gz"
+        - "#*#"                 # Emacs temporary files.
+      # regex:
+      #   - '.*\.(tmp|bin|tar)$'
