@@ -59,11 +59,13 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
 
 ## Introduction ##
 
-EmuTOS is a single-user single-tasking operating system for 32-bit Atari computers, clones and emulators. It can be used as a replacement for the TOS images typically needed by emulators and can also run on some real hardware, including the Atari ST(e), TT, and Falcon, and the FireBee. It can even run on non-Atari hardware such as Amiga and ColdFire Evaluation Boards. All the source code is open and free, licensed under the GNU General Public License (GPL).
+EmuTOS is a single-user single-tasking operating system for 32-bit Atari computers, clones and emulators. It can be used as a replacement for the TOS images typically needed by emulators and can also run on some real hardware, including the Atari ST(e), TT, and Falcon, and the FireBee. It can even run on non-Atari hardware such as Amiga and ColdFire Evaluation Boards.
 
 ## License ##
 
-Erm, what is our license here? Gnu FDL? Creative Commons License?
+All the source code is open and free, licensed under the GNU General Public License (GPL), Version 2, June 1991. The text of the license is in the [distribution](#docFiles).
+
+> Erm, what is our license for this document? Gnu FDL? Creative Commons License?
 
 ## Audience ##
 
@@ -71,9 +73,13 @@ This manual is for EmuTOS users. For more on EmuTOS, see the [web site](https://
 
 ### What This Manual Covers ###
 
+This manual describes EmuTOS Version 1.0.1.
+
 ### What This Manual Doesn't Cover ###
 
-Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
+Getting the current git repository, or compiling the source. However, you can get the source for recent releases. See [Available Archives](#available-archives).
+
+Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, some Amigas, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari and ARAnyM. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
 
 <a id="docFiles"></a>There is a directory in the distribution (see [Getting EmuTOS](#getting-emutos)), ``/doc``, which has more documentation.
 
@@ -83,16 +89,12 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 | authors.txt | Contributors to EmuTOS and a wee bit of the history. |
 | bugs.txt | A list of known bugs, including bugs that are know to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
 | changelog.txt | Changes from release 0.9.4 until the current version. |
-| emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not or partially implemented in the 192KB ROMs. Also some information on advanced features not covered here, such as user-assignable icons. |
-| incompatible.txt | A list of programs incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
+| emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not implemented, or partially implemented in the 192KB ROMs. Also some information on advanced features not covered here, such as user-assignable icons. |
+| incompatible.txt | A list of programs known to be incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
 | license.txt | The GNU General Public License, Version 2, June 1991 |
-| status.txt | The status of EmuTOS support for various bits of hardware and emulators. Please read before you file a [bug report](#reporting-bugs). |
+| status.txt | The status of EmuTOS support for various bits of hardware and emulators, and implemented functions. Please read before you file a [bug report](#reporting-bugs). |
 | todo.txt | Things to do. Volunteers are welcome. |
 | xhdi.txt | Notes on when ceratin entities were available in TOS, and their status under EmuTOS. |
-
-Current releases give a detailed compatibility list in the file ``doc/status.txt``.
-
-Getting the current current git repository, or compiling the source.
 
 ### Typography ###
 
@@ -152,9 +154,9 @@ Installation on Atari hardware can be as simple as putting the right file in the
 
 The floppy version of EmuTOS provides a floppy disk image with a hidden ``.SYS`` file in its root directory.
 
-This is slower than booting from [ROM](#rom) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
+Hard drive or floppy is slower than booting from [ROM](#rom) and uses main memory, so use it to try EmuTOS (or a new version of EmuTOS).
 
-Get the emutos-prg-\*.zip or emutos-floppy-\* zip file. See the readme.txt file in the archive for more information.
+Get the emutos-prg-\*.zip or emutos-floppy-\* archive. See the readme.txt file in the archive for more information.
 
 #### Read Only Memory ####
 
@@ -162,9 +164,11 @@ Almost all Atari STs came with TOS in [read only memory (ROM)](#rom). Only a few
 
 Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For emulators, consult the emulator's documentation. Note that the 192K ROMs do not provide [EmuCON](#emucon) or a number of desktop features, so you may prefer the 256K or 512K ROMs if your hardware will support them. However, you can add EmuCON to a disk with the ``emucon-X.Y.zip`` archive.
 
+The 68000 has a 16 bit wide data bus. Because of that, ROM images have to be split into at least two files, one for each EPROM. Doing that requires special software, and is beyond the scope of this document.
+
 #### Cartridge ####
 
-There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no AES or desktop. It is [EmuCON](#emucon) only. For these reasons we suggest it only for very tight memory situations, or in the unusual case of bringing up new hardware.
+There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no AES or desktop. It contains [EmuCON](#emucon) only, no GUI or desktop. For these reasons we suggest it only for very tight memory situations, or in the unusual case of bringing up new hardware.
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
@@ -188,13 +192,13 @@ There are a number of features to note about the boot screen.
 
 - The version of EmuTOS that is booting. This shows major and minor revision numbers (e.g. 1.3) and the patch number if one is present (e.g. 1.3.2).
 
-- The type of CPU found.
+- The type of CPU found, in this case a Motorola 68000.
 
-- The hardware found (or, as in this case, emulated).
+- The hardware found (or, as in this case, emulated), in this case an Atari Mega ST.
 
-- How much main memory was found.
+- How much main memory was found, 4 MB in this example.
 
-- An enumeration of the floppy drives (A and B) and hard drive partitions found. The boot drive is in reverse video.
+- An enumeration of the floppy drives (A and B) and hard drive partitions found. The boot drive (here, ``C:``) is in reverse video.
 
 - The time and date of the boot if EmuTOS finds a real-time clock. If no real-time clock is found, a bogus time and date will be shown in reverse video.
 
@@ -206,17 +210,15 @@ There are a number of features to note about the boot screen.
 
     - To boot from any drive, press its letter. For example, to boot from I: press the i key. This allows for different custom setups.
 
-    - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might also be useful for recovering from a boot sequence gone wrong.
+    - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might be useful for recovering from a boot sequence gone wrong.
 
 ## Rebooting ##
 
 There are two ways to reboot EmuTOS. Consult your hardware or emulator documentation for how to achieve them.
 
-A hard reboot clears everything that has been done since power up. A hard reboot is comparable to powering down and up again. This is achieved with the reset button on most hardware.
+A hard reboot clears everything that has been done since power up. A hard reboot is comparable to powering down and up again. This is achieved with the reset button on most hardware. In EmuTOS, as in some versions of TOS, you can achieve a hard reboot with Ctrl-Alt-Shift-Delete. A [boot screen](#booting) is shown. A hard reboot returns to ROM, so if you are running EmuTOS from a disk drive, you will have to launch it again from whatever OS is in ROM.
 
-In EmuTOS, as in some versions of TOS, you can achieve a hard reboot with Ctrl-Alt-Shift-Delete. A [boot screen](#booting) is shown. A hard reboot returns to ROM, so if you are running EmuTOS from a disk drive, you will have to launch it again from whatever OS is in ROM.
-
-A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDESK. It may be achieved with Control-Alt-Delete keys. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDESK.
+A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDESK. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDESK.
 
 ## The Desktop ##
 
@@ -228,7 +230,7 @@ EmuDesk implements all of the features of the Atari TOS 2/3/4 desktop. And it ha
 
 Due to space limitations, the desktop implementation is somewhat restricted in the 192K ROMs. For the gory details, see the file ``doc/emudesk.txt`` in the archive.
 
-If you make any changes to the desktop using the above features, you must save the desktop to preserve the changes.
+If you make any changes to the desktop using the above features, you must [save the desktop](#saving-the-desktop) to preserve the changes.
 
 ### Minimal Desktop ###
 
@@ -240,7 +242,7 @@ The File menu will let you format a floppy, which isn't very useful without a fl
 
 The View menu lets you select how you seen directories. You can also set the background and you can set a number of other preferences. You can also read a ``*.INF`` file, which is a desktop information file, similar to the Atari TOS ``DESKTOP.INF`` file. EmuTOS uses ``EMUDESK.INF``.
 
-**Note** EmuTOS will always create a printer and trash icon if it does not see ``EMUDESK.INF``. If you don't have a printer, the icon is harmless, and you can always remove it. If you do, save your desktop.
+**Note** EmuTOS will always create a printer and trash icon if it does not see ``EMUDESK.INF``. If you don't have a printer, the icon is harmless, and you can always remove it. If you do, [save your desktop](#saving-the-desktop).
 
 ### Floppy Disk Only Desktop ###
 
@@ -248,7 +250,7 @@ The View menu lets you select how you seen directories. You can also set the bac
 
 *Above: EmuTOS minimal desktop screen with a floppy disk icon visible.*
 
-If we have one floppy disk drive, we get one floppy disk icon on the desktop. Unlike TOS, EmuTOS does not support emulating floppy drive B: in physical floppy drive A:. Again, unlike TOS, if you have only one floppy drive, you will see only one floppy drive icon.
+If you have one floppy disk drive, you get one floppy disk icon on the desktop. Unlike TOS, EmuTOS does not support emulating floppy drive B: in physical floppy drive A:. Again, unlike TOS, if you have only one floppy drive, you will see only one floppy drive icon.
 
 **Note** We recommend you consider mass storage other than floppy drives. You can now buy add-ons for Atari STs that emulate floppy drives and hard drives using solid state memory.
 
@@ -299,11 +301,11 @@ Folder windows have several widgets of interest.
 
 You can select one file by clicking on it. Select multiple files within the same window by selecting the first, then hold the shift key down while you click on other files (Shift Click). There is no way to select a range of files. You can narrow the visible files by [setting the file mask](#file-mask). You can select all the files in the current window with File -> Select All Items (^A). Having done that, you can then use Shift Click to deselect items.
 
-If you then select an operation, the dialog you then select will walk through the ones you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
+If you then select an operation, the dialog you then select will walk through the files you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
 
 #### Manipulating Files and Directories ####
 
-Once you have selected one or more files, you can copy them to another window by dragging them to the new window. You can move them by holding down the control key while you drag.
+Once you have selected one or more files, you can copy them to another window by dragging them to the new window. You can move them by holding down a control key while you drag.
 
 * To create a new folder, File -> New Folder (^N).
 
@@ -373,8 +375,6 @@ If you do lots of experiments and end up with a cluttered desktop, you can get b
 
 This also lets you have multiple desktops. The easiest way to have multiple desktops is to keep them in ``C:\`` and use the extension ``.INF``. ``GAMES.INF``, ``DEVEL.INF``, and so on, limited only by the eight characters in the base part of the file name.
 
-> I could use more information here. What do the other options do?
-
 #### Preferences ####
 
 Use the Options -> Set preferences... dialog to have GEM confirm file deletions, copies or overwrites.
@@ -393,7 +393,7 @@ Finally, the Desktop Configuration shows you how much free RAM you have availabl
 
 #### Blitter ####
 
-The menu option Options -> Blitter lets you turn on or off the blitter chip, if you have one. Some programs (typically games) have problems with the blitter, so turning it off can help those programs.
+The menu option Options -> Blitter lets you turn the blitter chip on or off, if you have one. Some programs (typically games) have problems with the blitter, so turning it off can help those programs.
 
 #### Cache ####
 
