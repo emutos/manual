@@ -48,7 +48,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
             - [Add an Application](#add-an-application)
             - [Restoring Your Desktop](#restoring-your-desktop)
             - [Preferences](#preferences)
-            - [Desktop configuration](#desktop-configuration)
+            - [Desktop Configuration](#desktop-configuration)
             - [Blitter](#blitter)
             - [Cache](#cache)
         - [Desktop Accessories](#desktop-accessories)
@@ -402,7 +402,7 @@ Use the Options -> Set preferences... dialog to have GEM confirm file deletions,
 
 Select More preferences to set how quickly GEM decides you have double clicked on something rather than two separate clicks, whether you have to click on a menu to get it or just mouse over it, and the time and date formats.
 
-#### Desktop configuration ####
+#### Desktop Configuration ####
 
 > What do the two top radio buttons here do?
 
