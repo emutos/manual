@@ -40,6 +40,9 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
             - [Manipulating Files and Directories](#manipulating-files-and-directories)
             - [File Information](#file-information)
             - [File Mask](#file-mask)
+        - [What You See](#what-you-see)
+            - [Icons vs. Text](#icons-vs-text)
+            - [Sort Order](#sort-order)
         - [Customizing the Desktop](#customizing-the-desktop)
             - [Add an Icon](#add-an-icon)
             - [Add an Application](#add-an-application)
@@ -342,6 +345,24 @@ For partitions or floppy diskettes, you will see the drive identifier (e.g. A fo
 #### File Mask ####
 
 You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional [wild cards](#wildcards) work. The title bar shows the file mask.
+
+### What You See ###
+
+The View menu lets you change how you see files in folder windows.
+
+#### Icons vs. Text ####
+
+In the View menu, you can select showing files as icons or as text.
+
+- There are several special icons for directories and special types of files, such as executables. You can [add custom icons](#add-an-icon).
+
+- Text mode shows file names and information about each file: length, and time and date modified. Directories, system files, and read-only files get small icons along the left column of the window.
+
+#### Sort Order ####
+
+You can also select how EmuDESK will sort the files in a folder: by name, type (extension), size and date. Directories are always sorted to the top, then files. There is no option to reverse the sort order.
+
+There is also an option to not sort at all. This option shows you the files as they are in the directory. This is particularly useful in arranging the ``\auto`` folder of your boot disk, because at [boot time](#booting) EmuTOS will execute the files there in the order it encounters them in the directory. The sort order options apply whether you display files as text or icons.
 
 ### Customizing the Desktop ###
 
