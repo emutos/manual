@@ -16,6 +16,7 @@ This is a work in progress, as is EmuTOS itself. Please bear with us as we impro
     - [Audience](#audience)
         - [What This Manual Covers](#what-this-manual-covers)
         - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
+            - [Documentation in the Distribution](#documentation-in-the-distribution)
         - [Typography](#typography)
     - [Compatibility](#compatibility)
     - [Getting EmuTOS](#getting-emutos)
@@ -83,6 +84,8 @@ This manual describes EmuTOS Version 1.0.1.
 Getting the current git repository, or compiling the source. However, you can get the source for recent releases. See [Available Archives](#available-archives).
 
 Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, some Amigas, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari and ARAnyM. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
+
+#### Documentation in the Distribution ####
 
 <a id="docFiles"></a>There is a directory in the distribution (see [Getting EmuTOS](#getting-emutos)), ``/doc``, which has more documentation.
 
@@ -511,6 +514,8 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 ## Resources ##
 
 Also see the [EmuTOS links page](https://emutos.sourceforge.io/links.html).
+
+* Documentation included in the [distribution](#documentation-in-the-distribution) and the source.
 
 * The [EmuTOS web site](https://emutos.sourceforge.io/).
 
