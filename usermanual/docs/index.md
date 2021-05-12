@@ -93,14 +93,14 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 |-----------|-----|
 | announce.txt | A summary of EmuTOS, including more technical information that what is here. |
 | authors.txt | Contributors to EmuTOS and a wee bit of the history. |
-| bugs.txt | A list of known bugs, including bugs that are know to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
+| bugs.txt | A list of known bugs, including bugs that are known to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
 | changelog.txt | Changes from release 0.9.4 until the current version. |
 | emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not implemented, or partially implemented in the 192KB ROMs. Also some information on advanced features not covered here, such as user-assignable icons. |
 | incompatible.txt | A list of programs known to be incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
 | license.txt | The GNU General Public License, Version 2, June 1991 |
 | status.txt | The status of EmuTOS support for various bits of hardware and emulators, and implemented functions. Please read before you file a [bug report](#reporting-bugs). |
 | todo.txt | Things to do. Volunteers are welcome. |
-| xhdi.txt | Notes on when ceratin entities were available in TOS, and their status under EmuTOS. |
+| xhdi.txt | Notes on when certain entities were available in TOS, and their status under EmuTOS. |
 
 ### Typography ###
 
@@ -114,7 +114,7 @@ Hatari users will find the [Hatari and EmuTOS](https://hatari.tuxfamily.org/doc/
 
 ## Getting EmuTOS ##
 
-You can get the current release from the [EmuTOS web site](https://emutos.sourceforge.io/download.html). There are many files available for each version. Which one you want depends on the hardware you are using. For example, emutos-aranym-*.zip files are for the aranym emulator.
+You can get the current release from the [EmuTOS web site](https://emutos.sourceforge.io/download.html). There are many files available for each version. Which one you want depends on the hardware you are using. For example, emutos-aranym-*.zip files are for the ARAnyM emulator.
 
 We highly recommend testing the zip file after you pull it in, especially if you aren't going to use it immediately. E.g. on Linux:
 
@@ -128,22 +128,23 @@ These are the zip archive files available for download, where X.Y indicates the 
 
 Multi-lingual versions will have multiple files. There are two differences: the language, Czech, French, etc., and the television format (NTSC or PAL) your hardware supports, if any. See the `readme.txt` file in the root directory of the zip file.
 
-| File name | Use |
-|-----------|-----|
-| emucon-X.Y.zip              | EmuCON only as a .prg executable |
-| emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image |
-| emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image |
-| emutos-512k-X.Y.zip         | 512 kilobyte [Atari ROM](#read-only-memory) image |
-| emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image |
-| emutos-amiga-rom-X.Y.zip    | [Amiga ROM](#amiga) image |
-| emutos-aranym-X.Y.zip       | Aranym (emulator) image |
-| emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) (EmuCON only) |
-| emutos-firebee-X.Y.zip      | Firebee executable |
-| emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive) |
-| emutos-m548x-bas-X.Y.zip    |
-| emutos-m548x-dbug-X.Y.zip   |
-| emutos-pak3-X.Y.zip         |
-| emutos-prg-X.Y.zip          | EmuTOS as an [Atari executable](#hard-or-floppy-drive) |
+| File name                   | Use                                                                            |
+|-----------------------------|--------------------------------------------------------------------------------|
+| emucon-X.Y.zip              | EmuCON only as a .prg executable                                               |
+| emutos-1024k-X.Y.zip        | One megabyte [Atari ROM](#read-only-memory) image                              |
+| emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image                      |
+| emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image                              |
+| emutos-512k-X.Y.zip         | 512 kilobyte [Atari ROM](#read-only-memory) image                              |
+| emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image                                          |
+| emutos-amiga-rom-X.Y.zip    | [Amiga ROM](#amiga) image                                                      |
+| emutos-aranym-X.Y.zip       | ARAnyM (emulator) image                                                        |
+| emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) (EmuCON only)                              |
+| emutos-firebee-X.Y.zip      | FireBee executable                                                             |
+| emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive)              |
+| emutos-m548x-bas-X.Y.zip    |                                                                                |
+| emutos-m548x-dbug-X.Y.zip   |                                                                                |
+| emutos-pak3-X.Y.zip         |                                                                                |
+| emutos-prg-X.Y.zip          | EmuTOS as an [Atari executable](#hard-or-floppy-drive)                         |
 | emutos-src-X.Y.tar.gz       | Source code for this version, including some documentation not found elsewhere |
 
 ## Installation ##
@@ -224,7 +225,7 @@ There are two ways to reboot EmuTOS. Consult your hardware or emulator documenta
 
 A hard reboot clears everything that has been done since power up. A hard reboot is comparable to powering down and up again. This is achieved with the reset button on most hardware. In EmuTOS, as in some versions of TOS, you can achieve a hard reboot with Ctrl-Alt-Shift-Delete. A [boot screen](#booting) is shown. A hard reboot returns to ROM, so if you are running EmuTOS from a disk drive, you will have to launch it again from whatever OS is in ROM.
 
-A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDESK. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDESK.
+A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDesk. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDesk.
 
 ## The Desktop ##
 
@@ -337,7 +338,7 @@ Note that the old standby ^C (for copy) and ^P (for paste) don't work for copyin
 
 EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked h, for hidden; s, for system; and r, for read-only.
 
-There is also an archive flag. When set, this file has been changed since the last archive was made. Backup software can use this bit to archive only changed files, and then reset the flag. But neither EmuDESK nor EmuCON will allow you to edit this flag.
+There is also an archive flag. When set, this file has been changed since the last archive was made. Backup software can use this bit to archive only changed files, and then reset the flag. But neither EmuDesk nor EmuCON will allow you to edit this flag.
 
 The File Information dialog (File -> Info/Rename, ^I) will show you its name (with the option to change it), size, date and time, and whether a file is read-write or read only.
 
@@ -363,7 +364,7 @@ In the View menu, you can select showing files as icons or as text.
 
 #### Sort Order ####
 
-You can also select how EmuDESK will sort the files in a folder: by name, type (extension), size and date. Directories are always sorted to the top, then files. There is no option to reverse the sort order.
+You can also select how EmuDesk will sort the files in a folder: by name, type (extension), size and date. Directories are always sorted to the top, then files. There is no option to reverse the sort order.
 
 There is also an option to not sort at all. This option shows you the files as they are in the directory. This is particularly useful in arranging the ``\auto`` folder of your boot disk, because at [boot time](#booting) EmuTOS will execute the files there in the order it encounters them in the directory. The sort order options apply whether you display files as text or icons.
 
@@ -439,7 +440,7 @@ To deactivate, rename the file or move it to a different directory, then reboot.
 
 Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are available in some versions of TOS, and in EmuTOS.
 
-The Control Pannel is a special type of accessory that was originally provided by Atari. However, third-party versions are also available.
+The Control Panel is a special type of accessory that was originally provided by Atari. However, third-party versions are also available.
 
 ## EmuCON ##
 
@@ -471,7 +472,7 @@ The built-in commands are:
 | echo      | Sends everything after it on the line to the display. |
 | exit      | Leave EmuCON. |
 | help      | Show a list of built in commands (this table). Given a command as an argument, show a brief summary of that command's usage. |
-| ls/dir    | Show a directory listing. Given a path, display that file or directory. Unlike EmuDESK, EmuCON's ls will show hidden files. |
+| ls/dir    | Show a directory listing. Given a path, display that file or directory. Unlike EmuDesk, EmuCON's ls will show hidden files. |
 | mkdir/md  | Make a directory. |
 | mode      | Set characteristics of the "terminal", e.g. screen resolution. |
 | more      | Display a file one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q or ^C bails out of showing the file. |
