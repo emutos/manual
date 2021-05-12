@@ -29,5 +29,7 @@ plugins:
         # - "*.pdf"
         # - "*.gz"
         - "#*#"                 # Emacs temporary files.
-      # regex:
+      regex:
       #   - '.*\.(tmp|bin|tar)$'
+        - '#.#'               # Emacs temporary files.
+      #   - '.*(?<!(md|MD))$'     # anything not an md file.
