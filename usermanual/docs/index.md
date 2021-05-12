@@ -407,13 +407,17 @@ Select More preferences to set how quickly GEM decides you have double clicked o
 
 #### Desktop Configuration ####
 
-> What do the two top radio buttons here do?
+The two top pairs of radio buttons apply to programs to be [installed](#add-an-application). They specify behavior that applies when applications are launched indirectly, say via function key or by drag-and-drop. (Installed applications have the same 2 buttons that apply on an application basis.)
+
+The topmost pair allows you to specify which will be the current directory when an application starts.  "Application" means the directory containing the application; "Window" means the currently-topped window.  This can matter (depending how the application is written), e.g. when a program tries to load a resource or configuration file.
+
+The next pair of radio buttons specifies how the filename argument is passed to an application when launched by drag-and-drop.  "Full path" means that the fully-qualified file name is passed (e.g. ``D:\SOMEDIR\AFILE.DAT``). "File name" means that only the file name is passed (e.g. ``AFILE.DAT``).
 
 In the process of [adding an application](#add-an-application) to the desktop, you can assign a function key to it. You can inspect and change those assignments. Accepted values are 1 to 20, where 1 to ten is the function key with no modifier keys, and 11 to 20 indicate shifted function keys. So 12 indicates Shift-F2.
 
 You can re-assign shortcut keys to menu entries.
 
-Finally, the Desktop Configuration shows you how much free RAM you have available.
+Finally, the Desktop Configuration window shows you how much free RAM you have available.
 
 #### Blitter ####
 
