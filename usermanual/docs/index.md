@@ -408,7 +408,7 @@ Select More preferences to set how quickly GEM decides you have double clicked o
 
 #### Desktop Configuration ####
 
-The two top pairs of radio buttons apply to programs to be [installed](#add-an-application). They specify behavior that applies when applications are launched indirectly, say via function key or by drag-and-drop. (Installed applications have the same 2 buttons that apply on an application basis.)
+The two top pairs of radio buttons apply to programs which have not been [installed](#add-an-application). They specify behavior that applies when applications are launched, say via function key or by drag-and-drop. (Installed applications have the same two buttons that apply on a per application basis.)
 
 The topmost pair allows you to specify which will be the current directory when an application starts.  "Application" means the directory containing the application; "Window" means the currently-topped window.  This can matter (depending how the application is written), e.g. when a program tries to load a resource or configuration file.
 
