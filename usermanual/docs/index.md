@@ -506,11 +506,11 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 * <a id="aes"></a>AES: *Application Environment Service*, the highest level graphic environment in EmuTOS.
 
-* <a id="eprom"></a>EPROM: Erasable Programmable Read Only Memory, reprogrammable [ROM](#rom). Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.
+* <a id="eprom"></a>EPROM: *Erasable Programmable Read Only Memory*, reprogrammable [ROM](#rom). Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.
 
-* <a id="natfeats" ></a>NatFeats: Native Features support. This is a number of features that some ST emulators provide, and which EmuTOS supports. See your emulator's manual for details.
+* <a id="natfeats" ></a>NatFeats: *Native Features* support. This is a number of features that some ST emulators provide, and which EmuTOS supports. See your emulator's manual for details.
 
-* <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also [EPROM](#eprom). In this manual we will use the terms interchangably.
+* <a id="rom" ></a>ROM: *Read Only Memory*, usually not reprogrammable. See also [EPROM](#eprom). In this manual we will use the terms interchangably.
 
 * <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font support, and handles user events such as mouse clicks.
 
