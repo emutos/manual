@@ -131,7 +131,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | File name                   | Use                                                                            |
 |-----------------------------|--------------------------------------------------------------------------------|
 | emucon-X.Y.zip              | EmuCON only as a .prg executable                                               |
-| emutos-1024k-X.Y.zip        | One megabyte [Atari ROM](#read-only-memory) image                              |
+| emutos-1024k-X.Y.zip        | One megabyte multilingual [ROM](#read-only-memory) image. As Atari does not support 1 MB images, this is for Hatari.|
 | emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image                      |
 | emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image                              |
 | emutos-512k-X.Y.zip         | 512 kilobyte [Atari ROM](#read-only-memory) image                              |
