@@ -141,8 +141,8 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) (EmuCON only)                              |
 | emutos-firebee-X.Y.zip      | FireBee executable                                                             |
 | emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive)              |
-| emutos-m548x-bas-X.Y.zip    |                                                                                |
-| emutos-m548x-dbug-X.Y.zip   |                                                                                |
+| emutos-m548x-bas-X.Y.zip    | For M548x evaluation boards that were produced by Freescale, with ColdFire CPUs. |
+| emutos-m548x-dbug-X.Y.zip   | For M548x evaluation boards that were produced by Freescale, with ColdFire CPUs. |
 | emutos-pak3-X.Y.zip         |                                                                                |
 | emutos-prg-X.Y.zip          | EmuTOS as an [Atari executable](#hard-or-floppy-drive)                         |
 | emutos-src-X.Y.tar.gz       | Source code for this version, including some documentation not found elsewhere |
