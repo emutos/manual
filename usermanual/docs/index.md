@@ -95,7 +95,7 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 | authors.txt | Contributors to EmuTOS and a wee bit of the history. |
 | bugs.txt | A list of known bugs, including bugs that are known to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
 | changelog.txt | Changes from release 0.9.4 until the current version. |
-| emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not implemented, or partially implemented in the 192KB ROMs. Also some information on advanced features not covered here, such as user-assignable icons. |
+| emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not implemented, or partially implemented in the 192KB [ROMs](#rom). Also some information on advanced features not covered here, such as user-assignable icons. |
 | incompatible.txt | A list of programs known to be incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
 | license.txt | The GNU General Public License, Version 2, June 1991 |
 | status.txt | The status of EmuTOS support for various bits of hardware and emulators, and implemented functions. Please read before you file a [bug report](#reporting-bugs). |
@@ -175,7 +175,7 @@ The 68000 has a 16 bit wide data bus. Because of that, ROM images have to be spl
 
 #### Cartridge ####
 
-There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no AES or desktop. It contains [EmuCON](#emucon) only, no GUI or desktop. For these reasons we suggest it only for very tight memory situations, or in the unusual case of bringing up new hardware.
+There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no [AES](#aes) or desktop. It contains [EmuCON](#emucon) only, no GUI or desktop. For these reasons we suggest it only for very tight memory situations, or in the unusual case of bringing up new hardware.
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
@@ -191,7 +191,7 @@ Successful initialization after power up or a hard reset will produce a screen s
 
 *Above: EmuTOS boot screen on an RGB screen*
 
-The normal boot sequence is to initialize the hardware, then the operating system in ROM. If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in ``C:\AUTO`` and loads accessories in ``C:\``. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in ``A:\AUTO`` and loads accessories in ``A:``. However, you can bypass portions of that sequence as noted below.
+The normal boot sequence is to initialize the hardware, then the operating system in [ROM](#rom). If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in ``C:\AUTO`` and loads accessories in ``C:\``. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in ``A:\AUTO`` and loads accessories in ``A:``. However, you can bypass portions of that sequence as noted below.
 
 There are a number of features to note about the boot screen.
 
@@ -213,7 +213,7 @@ There are a number of features to note about the boot screen.
 
     - Hold a control key down to bypass the ``C:\AUTO`` directory and installing [accessories](#desktop-accessories). This is useful for debugging complicated boot sequences.
 
-    - Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from ROM.
+    - Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from [ROM](#rom).
 
     - To boot from any drive, press its letter. For example, to boot from I: press the i key. This allows for different custom setups.
 
@@ -223,7 +223,7 @@ There are a number of features to note about the boot screen.
 
 There are two ways to reboot EmuTOS. Consult your hardware or emulator documentation for how to achieve them.
 
-A hard reboot clears everything that has been done since power up. A hard reboot is comparable to powering down and up again. This is achieved with the reset button on most hardware. In EmuTOS, as in some versions of TOS, you can achieve a hard reboot with Ctrl-Alt-Shift-Delete. A [boot screen](#booting) is shown. A hard reboot returns to ROM, so if you are running EmuTOS from a disk drive, you will have to launch it again from whatever OS is in ROM.
+A hard reboot clears everything that has been done since power up. A hard reboot is comparable to powering down and up again. This is achieved with the reset button on most hardware. In EmuTOS, as in some versions of TOS, you can achieve a hard reboot with Ctrl-Alt-Shift-Delete. A [boot screen](#booting) is shown. A hard reboot returns to [ROM](#rom), so if you are running EmuTOS from a disk drive, you will have to launch it again from whatever OS is in ROM.
 
 A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDesk. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDesk.
 
@@ -235,7 +235,7 @@ A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to
 
 EmuDesk implements all of the features of the Atari TOS 2/3/4 desktop. And it has features TOS does not have.
 
-Due to space limitations, the desktop implementation is somewhat restricted in the 192K ROMs. For the gory details, see the file ``doc/emudesk.txt`` in the archive.
+Due to space limitations, the desktop implementation is somewhat restricted in the 192K [ROMs](#rom). For the gory details, see the file ``doc/emudesk.txt`` in the archive.
 
 If you make any changes to the desktop using the above features, you must [save the desktop](#saving-the-desktop) to preserve the changes.
 
@@ -494,7 +494,7 @@ show [<drive>]
     Show info for <drive> or current drive
 ```
 
-EmuCON is not provided in 192K ROMS. However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
+EmuCON is not provided in 192K [ROMs](#rom). However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
 
 ## Reporting Bugs ##
 
@@ -506,11 +506,11 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 * <a id="aes"></a>AES: *Application Environment Service*, the highest level graphic environment in EmuTOS.
 
-* <a id="eprom"></a>EPROM: Erasable Programmable Read Only Memory, reprogrammable [ROM](#rom). Generally more useful in experimental situations.
+* <a id="eprom"></a>EPROM: Erasable Programmable Read Only Memory, reprogrammable [ROM](#rom). Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.
 
 * <a id="natfeats" ></a>NatFeats: Native Features support. This is a number of features that some ST emulators provide, and which EmuTOS supports. See your emulator's manual for details.
 
-* <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also EPROM.
+* <a id="rom" ></a>ROM: Read Only Memory, usually not reprogrammable. See also [EPROM](#eprom). In this manual we will use the terms interchangably.
 
 * <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font support, and handles user events such as mouse clicks.
 
