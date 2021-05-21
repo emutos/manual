@@ -116,6 +116,8 @@ Hatari users will find the [Hatari and EmuTOS](https://hatari.tuxfamily.org/doc/
 
 You can get the current release from the [EmuTOS web site](https://emutos.sourceforge.io/download.html). There are many files available for each version. Which one you want depends on the hardware you are using. For example, emutos-aranym-*.zip files are for the ARAnyM emulator.
 
+Thos who wish to live dangerously can also get a recent [snapshot](https://sourceforge.net/projects/emutos/files/snapshots/).
+
 We highly recommend testing the zip file after you pull it in, especially if you aren't going to use it immediately. E.g. on Linux:
 
 ```
