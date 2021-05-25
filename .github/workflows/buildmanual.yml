@@ -1,0 +1,30 @@
+name: Generate HTML manual
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Install packages
+      # The mkdocs 'exclude' plugin is not available as Ubuntu package,
+      # thus, install mkdocs and matching plugin via pip.
+      run: |
+        sudo apt-get update
+        sudo apt-get install python3-pip
+        sudo pip install mkdocs mkdocs-exclude
+    - name: Set git user name
+      # This is purely for a nicer looking commit history
+      run: git config --global user.name "EmuTOS documentation bot"
+    - name: Build and deploy website
+      run: |
+        cd usermanual
+        mkdocs gh-deploy
