@@ -1,130 +1,124 @@
-# The EmuTOS User Manual #
-
 Welcome!
 
 This is a work in progress, as is EmuTOS itself. Please bear with us as we improve it. Contributions are welcome.
 
-## Table of Contents ##
-
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
-- [The EmuTOS User Manual](#the-emutos-user-manual)
-    - [Table of Contents](#table-of-contents)
-    - [Introduction](#introduction)
-    - [License](#license)
-    - [Audience](#audience)
-        - [What This Manual Covers](#what-this-manual-covers)
-        - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
-            - [Documentation in the Distribution](#documentation-in-the-distribution)
-        - [Typography](#typography)
-    - [Compatibility](#compatibility)
-    - [Getting EmuTOS](#getting-emutos)
-        - [Available Archives](#available-archives)
-    - [Installation](#installation)
-        - [Atari](#atari)
-            - [Hard or Floppy Drive](#hard-or-floppy-drive)
-            - [Read Only Memory](#read-only-memory)
-            - [Cartridge](#cartridge)
-        - [Amiga](#amiga)
-        - [Other Hardware](#other-hardware)
-    - [Booting](#booting)
-    - [Rebooting](#rebooting)
-    - [The Desktop](#the-desktop)
-        - [Minimal Desktop](#minimal-desktop)
-        - [Floppy Disk Only Desktop](#floppy-disk-only-desktop)
-        - [Hard Drive](#hard-drive)
-        - [Using the Desktop](#using-the-desktop)
-            - [Saving the Desktop](#saving-the-desktop)
-            - [Opening a Disk Drive or Directory](#opening-a-disk-drive-or-directory)
-            - [File Selection](#file-selection)
-            - [Manipulating Files and Directories](#manipulating-files-and-directories)
-            - [File Information](#file-information)
-            - [File Mask](#file-mask)
-        - [What You See](#what-you-see)
-            - [Icons vs. Text](#icons-vs-text)
-            - [Sort Order](#sort-order)
-        - [Customizing the Desktop](#customizing-the-desktop)
-            - [Add an Icon](#add-an-icon)
-            - [Add an Application](#add-an-application)
-            - [Restoring Your Desktop](#restoring-your-desktop)
-            - [Preferences](#preferences)
-            - [Desktop Configuration](#desktop-configuration)
-            - [Blitter](#blitter)
-            - [Cache](#cache)
-        - [Desktop Accessories](#desktop-accessories)
-        - [Control Panel eXtensions](#control-panel-extensions)
-    - [EmuCON](#emucon)
-    - [Reporting Bugs](#reporting-bugs)
-    - [Glossary](#glossary)
-    - [Resources](#resources)
+- [Introduction](#introduction)
+- [License](#license)
+- [Audience](#audience)
+    - [What This Manual Covers](#what-this-manual-covers)
+    - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
+        - [Documentation in the Distribution](#documentation-in-the-distribution)
+    - [Typography](#typography)
+- [Compatibility](#compatibility)
+- [Getting EmuTOS](#getting-emutos)
+    - [Available Archives](#available-archives)
+- [Installation](#installation)
+    - [Atari](#atari)
+        - [Hard or Floppy Drive](#hard-or-floppy-drive)
+        - [Read Only Memory](#read-only-memory)
+        - [Cartridge](#cartridge)
+    - [Amiga](#amiga)
+    - [Other Hardware](#other-hardware)
+- [Booting](#booting)
+- [Rebooting](#rebooting)
+- [The Desktop](#the-desktop)
+    - [Minimal Desktop](#minimal-desktop)
+    - [Floppy Disk Only Desktop](#floppy-disk-only-desktop)
+    - [Hard Drive](#hard-drive)
+    - [Using the Desktop](#using-the-desktop)
+        - [Saving the Desktop](#saving-the-desktop)
+        - [Opening a Disk Drive or Directory](#opening-a-disk-drive-or-directory)
+        - [File Selection](#file-selection)
+        - [Manipulating Files and Directories](#manipulating-files-and-directories)
+        - [File Information](#file-information)
+        - [File Mask](#file-mask)
+    - [What You See](#what-you-see)
+        - [Icons vs. Text](#icons-vs-text)
+        - [Sort Order](#sort-order)
+    - [Customizing the Desktop](#customizing-the-desktop)
+        - [Add an Icon](#add-an-icon)
+        - [Add an Application](#add-an-application)
+        - [Restoring Your Desktop](#restoring-your-desktop)
+        - [Preferences](#preferences)
+        - [Desktop Configuration](#desktop-configuration)
+        - [Blitter](#blitter)
+        - [Cache](#cache)
+    - [Desktop Accessories](#desktop-accessories)
+    - [Control Panel eXtensions](#control-panel-extensions)
+- [EmuCON](#emucon)
+- [Reporting Bugs](#reporting-bugs)
+- [Glossary](#glossary)
+- [Resources](#resources)
 
 <!-- markdown-toc end -->
 
-## Introduction ##
+# Introduction #
 
 EmuTOS is a single-user single-tasking operating system for 32-bit Atari computers, clones and emulators. It can be used as a replacement for the TOS images typically needed by emulators and can also run on some real hardware, including the Atari ST(e), TT, and Falcon, and the FireBee. It can even run on non-Atari hardware such as Amiga and ColdFire Evaluation Boards.
 
-## License ##
+# License #
 
 All the source code is open and free, licensed under the GNU General Public License (GPL), Version 2, June 1991. The text of the license is in the [distribution](#docFiles).
 
 > Erm, what is our license for this document? Gnu FDL? Creative Commons License?
 
-## Audience ##
+# Audience #
 
 This manual is for EmuTOS users. For more on EmuTOS, see the [web site](https://emutos.sourceforge.io).
 
-### What This Manual Covers ###
+## What This Manual Covers ##
 
 This manual describes EmuTOS Version 1.0.1.
 
-### What This Manual Doesn't Cover ###
+## What This Manual Doesn't Cover ##
 
 Getting the current git repository, or compiling the source. However, you can get the source for recent releases. See [Available Archives](#available-archives).
 
 Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, some Amigas, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari and ARAnyM. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.
 
-#### Documentation in the Distribution ####
+### Documentation in the Distribution ###
 
 <a id="docFiles"></a>There is a directory in the distribution (see [Getting EmuTOS](#getting-emutos)), ``/doc``, which has more documentation.
 
 | File | Description |
 |-----------|-----|
-| announce.txt | A summary of EmuTOS, including more technical information that what is here. |
-| authors.txt | Contributors to EmuTOS and a wee bit of the history. |
-| bugs.txt | A list of known bugs, including bugs that are known to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
-| changelog.txt | Changes from release 0.9.4 until the current version. |
-| emudesk.txt | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not implemented, or partially implemented in the 192KB [ROMs](#rom). Also some information on advanced features not covered here, such as user-assignable icons. |
-| incompatible.txt | A list of programs known to be incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
-| license.txt | The GNU General Public License, Version 2, June 1991 |
-| status.txt | The status of EmuTOS support for various bits of hardware and emulators, and implemented functions. Please read before you file a [bug report](#reporting-bugs). |
-| todo.txt | Things to do. Volunteers are welcome. |
-| xhdi.txt | Notes on when certain entities were available in TOS, and their status under EmuTOS. |
+| [announce.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/announce.txt) | A summary of EmuTOS, including more technical information that what is here. |
+| [authors.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/authors.txt) | Contributors to EmuTOS and a wee bit of the history. |
+| [bugs.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/bugs.txt) | A list of known bugs, including bugs that are known to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
+| [changelog.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/changelog.txt) | Changes from release 0.9.4 until the current version. |
+| [emudesk.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/emudesk.txt) | A list of features, including those from the TOS desktop, implemented in the current release. Also, notes as to which features are not implemented, or partially implemented in the 192KB [ROMs](#rom). Also some information on advanced features not covered here, such as user-assignable icons. |
+| [incompatible.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/incompatible.txt) | A list of programs known to be incompatible with EmuTOS, some workarounds, and explanations as to why they might be incompatible. Please read before you file a [bug report](#reporting-bugs). |
+| [license.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/license.txt) | The GNU General Public License, Version 2, June 1991 |
+| [status.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/status.txt) | The status of EmuTOS support for various bits of hardware and emulators, and implemented functions. Please read before you file a [bug report](#reporting-bugs). |
+| [todo.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/todo.txt) | Things to do. Volunteers are welcome. |
+| [xhdi.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/xhdi.txt) | Notes on when certain entities were available in TOS, and their status under EmuTOS. |
 
-### Typography ###
+## Typography ##
 
 In this manual, a caret (^) indicates a control character. For example, ^I means hold down a control key and press the i key. The shift key is optional.
 
-## Compatibility ##
+# Compatibility #
 
 A list of programs that are known to be [incompatible with EmuTOS](https://github.com/emutos/emutos/blob/master/doc/incompatible.txt) is in the source tree. Often, these programs take advantage of undocumented aspects of TOS. These often break on different versions of TOS, sometimes on different languages in the same version of TOS, as well as on EmuTOS. Please check this list before reporting an EmuTOS bug.
 
 Hatari users will find the [Hatari and EmuTOS](https://hatari.tuxfamily.org/doc/emutos.txt) document useful. However, check for the most [recent versions of EmuTOS](https://emutos.sourceforge.io/download.html).
 
-## Getting EmuTOS ##
+# Getting EmuTOS #
 
 You can get the current release from the [EmuTOS web site](https://emutos.sourceforge.io/download.html). There are many files available for each version. Which one you want depends on the hardware you are using. For example, emutos-aranym-*.zip files are for the ARAnyM emulator.
 
 Thos who wish to live dangerously can also get a recent [snapshot](https://sourceforge.net/projects/emutos/files/snapshots/).
 
-We highly recommend testing the zip file after you pull it in, especially if you aren't going to use it immediately. E.g. on Linux:
+We highly recommend testing the zip file after you pull it in. E.g. on Linux:
 
 ```
 unzip -t file-name
 ```
 
-### Available Archives ###
+## Available Archives ##
 
 These are the zip archive files available for download, where X.Y indicates the current release version. See below for how to use some of them. The source is also available from a git repository, which is beyond the scope of this document.
 
@@ -132,7 +126,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 
 | File name                   | Use                                                                            |
 |-----------------------------|--------------------------------------------------------------------------------|
-| emucon-X.Y.zip              | EmuCON only as a .prg executable                                               |
+| emucon-X.Y.zip              | [EmuCON](#EmuCON) shell program as separate executable                                             |
 | emutos-1024k-X.Y.zip        | One megabyte multilingual [ROM](#read-only-memory) image. As Atari does not support 1 MB images, this is for Hatari.|
 | emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image                      |
 | emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image                              |
@@ -140,7 +134,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image                                          |
 | emutos-amiga-rom-X.Y.zip    | [Amiga ROM](#amiga) image                                                      |
 | emutos-aranym-X.Y.zip       | ARAnyM (emulator) image                                                        |
-| emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) (EmuCON only)                              |
+| emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) ([EmuCON](#EmuCON) only)                              |
 | emutos-firebee-X.Y.zip      | FireBee executable                                                             |
 | emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive)              |
 | emutos-m548x-bas-X.Y.zip    | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
@@ -149,15 +143,15 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | emutos-prg-X.Y.zip          | EmuTOS as an [Atari executable](#hard-or-floppy-drive)                         |
 | emutos-src-X.Y.tar.gz       | Source code for this version, including some documentation not found elsewhere |
 
-## Installation ##
+# Installation #
 
 In many cases, installation of a new operating system is covered by the hardware documentation.
 
-### Atari ###
+## Atari ##
 
 No-one at Atari anticipated that thirty years on people would still be hacking Atari computers, so they made little provision for upgrading their operating systems. But you can! Downloads are available at the [EmuTOS download](https://emutos.sourceforge.io/download.html) web site.
 
-#### Hard or Floppy Drive ####
+### Hard or Floppy Drive ###
 
 Installation on Atari hardware can be as simple as putting the right file in the right place. The existing operating system, typically TOS, boots, and as part of its boot process, executes whatever it finds in ``C:\AUTO``. The prg version of EmuTOS provides an executable, ``EMUTOS*.PRG``, which you can copy into ``C:\AUTO``. Or you can put it any place convenient, and launch it at will.
 
@@ -167,7 +161,7 @@ Hard drive or floppy is slower than booting from [ROM](#rom) and uses main memor
 
 Get the emutos-prg-\*.zip or emutos-floppy-\* archive. See the readme.txt file in the archive for more information.
 
-#### Read Only Memory ####
+### Read Only Memory ###
 
 Almost all Atari STs came with TOS in [read only memory (ROM)](#rom). Only a few very early ones expected to boot the operating system from mass storage, meaning, in those days, floppy disk. EmuTOS is not specific to any particular version of Atari hardware, except for the ROM space available. You will have to select the size of the EmuTOS image to download and burn to ROM (or, more likely, [EPROM](#eprom)). If you are using an emulator, see the emulator's documentation for installing a new ROM image.
 
@@ -175,17 +169,17 @@ Get the emutos-XXXk*.zip file, where XXX is the size ROM of your hardware. For e
 
 The 68000 has a 16 bit wide data bus. Because of that, ROM images have to be split into at least two files, one for each EPROM. Doing that requires special software, and is beyond the scope of this document.
 
-#### Cartridge ####
+### Cartridge ###
 
 There is also a cartridge version, which goes in the game cartridge on Atari hardware. Due to the limited space available, it is English only and has no [AES](#aes) or desktop. It contains [EmuCON](#emucon) only, no GUI or desktop. For these reasons we suggest it only for very tight memory situations, or in the unusual case of bringing up new hardware.
 
 Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for further instructions.
 
-### Amiga ###
+## Amiga ##
 
-### Other Hardware ###
+## Other Hardware ##
 
-## Booting ##
+# Booting #
 
 Successful initialization after power up or a hard reset will produce a screen similar to this one.
 
@@ -221,7 +215,7 @@ There are a number of features to note about the boot screen.
 
     - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might be useful for recovering from a boot sequence gone wrong.
 
-## Rebooting ##
+# Rebooting #
 
 There are two ways to reboot EmuTOS. Consult your hardware or emulator documentation for how to achieve them.
 
@@ -229,7 +223,7 @@ A hard reboot clears everything that has been done since power up. A hard reboot
 
 A soft reboot (Ctrl-Alt-Delete) stops the current program and returns control to EmuDesk. No [boot screen](#booting) is shown, and EmuTOS goes directly to EmuDesk.
 
-## The Desktop ##
+# The Desktop #
 
 ![Minimal EmuTOS desktop](images/minimal.atari.desktop.mono.png "Minimal EmuTOS desktop")
 
@@ -241,7 +235,7 @@ Due to space limitations, the desktop implementation is somewhat restricted in t
 
 If you make any changes to the desktop using the above features, you must [save the desktop](#saving-the-desktop) to preserve the changes.
 
-### Minimal Desktop ###
+## Minimal Desktop ##
 
 If you have a minimal Atari system, this screen shot is what you will see: a plain desktop. It's not very interesting. Still, a few things to note.
 
@@ -253,7 +247,7 @@ The View menu lets you select how you seen directories. You can also set the bac
 
 **Note** EmuTOS will always create a printer and trash icon if it does not see ``EMUDESK.INF``. If you don't have a printer, the icon is harmless, and you can always remove it. If you do, [save your desktop](#saving-the-desktop).
 
-### Floppy Disk Only Desktop ###
+## Floppy Disk Only Desktop ##
 
 ![Floppy Desktop](images/floppy.atari.desktop.mono.png "Floppy Desktop")
 
@@ -265,10 +259,10 @@ If you have one floppy disk drive, you get one floppy disk icon on the desktop. 
 
 Now the File menu is more interesting. You can do a lot of typical file manipulations.
 
-### Hard Drive ###
+## Hard Drive ##
 
 
-### Using the Desktop ###
+## Using the Desktop ##
 
 Using a new (to you) computer is a bit like moving into a new home. "Where did we put that..." This section will walk you through some typical operations and some things that may make life a bit easier.
 
@@ -276,11 +270,11 @@ Many options also have shortcut keys, e.g. ^S to save the desktop. You can note 
 
 Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter. It will install icons on the desktop for the drives it recognizes.
 
-#### Saving the Desktop ####
+### Saving the Desktop ###
 
 As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit ^S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
 
-#### Opening a Disk Drive or Directory ####
+### Opening a Disk Drive or Directory ###
 
 To open a window on a disk drive, double click on its icon. Or hit an Alt key and the drive letter, e.g. Alt g to open G:. To view any directory (folder), double click on its entry. Note that in text view mode, directories are identified by a small icon to the left of the name of the directory. In icon view mode, they have a manila folder icon, rather than the piece of paper icon files get.
 
@@ -306,13 +300,13 @@ Folder windows have several widgets of interest.
 
 * If you have multiple windows open, you can cycle through all of them with File -> Cycle windows (^W). On a crowded desktop, this is a great convenience.
 
-#### File Selection ####
+### File Selection ###
 
 You can select one file by clicking on it. Select multiple files within the same window by selecting the first, then hold the shift key down while you click on other files (Shift Click). There is no way to select a range of files. You can narrow the visible files by [setting the file mask](#file-mask). You can select all the files in the current window with File -> Select All Items (^A). Having done that, you can then use Shift Click to deselect items.
 
 If you then select an operation, the dialog you then select will walk through the files you have selected. For example, select several files and directories. Then look at the information on them with ^I. The Skip button at the bottom lets you skip a file or directory, whereas the OK button accepts your changes, and the Cancel button lets you end the sequence.
 
-#### Manipulating Files and Directories ####
+### Manipulating Files and Directories ###
 
 Once you have selected one or more files, you can copy them to another window by dragging them to the new window. You can move them by holding down a control key while you drag.
 
@@ -334,9 +328,9 @@ Once you have selected one or more files, you can copy them to another window by
 
 **Note** Be careful with deletion! There is no "undo".
 
-Note that the old standby ^C (for copy) and ^P (for paste) don't work for copying files or directories.
+Those accustomed to more modern graphical user interfaces please note that the old standby shortcuts ^C (for copy) and ^P (for paste) don't work for copying files or directories.
 
-#### File Information ####
+### File Information ###
 
 EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked h, for hidden; s, for system; and r, for read-only.
 
@@ -348,15 +342,15 @@ If you are looking at a folder (directory), the dialog will show you the number 
 
 For partitions or floppy diskettes, you will see the drive identifier (e.g. A for a floppy drive), the disk label, the numbers of files and folders, and the space used by files (not directories, or metadata), and the available space (in bytes).
 
-#### File Mask ####
+### File Mask ###
 
 You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional [wild cards](#wildcards) work. The title bar shows the file mask.
 
-### What You See ###
+## What You See ##
 
 The View menu lets you change how you see files in folder windows.
 
-#### Icons vs. Text ####
+### Icons vs. Text ###
 
 In the View menu, you can select showing files as icons or as text.
 
@@ -364,21 +358,21 @@ In the View menu, you can select showing files as icons or as text.
 
 - Text mode shows file names and information about each file: length, and time and date modified. Directories, system files, and read-only files get small icons along the left column of the window.
 
-#### Sort Order ####
+### Sort Order ###
 
 You can also select how EmuDesk will sort the files in a folder: by name, type (extension), size and date. Directories are always sorted to the top, then files. There is no option to reverse the sort order.
 
 There is also an option to not sort at all. This option shows you the files as they are in the directory. This is particularly useful in arranging the ``\auto`` folder of your boot disk, because at [boot time](#booting) EmuTOS will execute the files there in the order it encounters them in the directory. The sort order options apply whether you display files as text or icons.
 
-### Customizing the Desktop ###
+## Customizing the Desktop ##
 
 Use the Options menu to customize the desktop.
 
-#### Add an Icon ####
+### Add an Icon ###
 
 To add icons to your desktop or edit existing ones, use Options -> Install Icon... . Note that for drive icons, the identifier is one capital letter, for example, Z. You can also add or edit the label. So instead of "Disk J", you can have "Development" for your software development drive. These can be aliases of the existing lettered drives, so that, say, "DISK C" and "Development" open the same drive. Depending on the icon you select, the drive letter (if any) may show up above and to the left of the icon.
 
-#### Add an Application ####
+### Add an Application ###
 
 You can set up one or more applications as desktop icons. Select the executables. Then select Options -> Install application... . Supply any command line arguments.
 
@@ -386,9 +380,9 @@ To associate an extension with a given application, enter that extension in the 
 
 "Install as" lets you assign a keystroke to the application, such as function key 1, F1. Accepted values are 1 to 20, where 1 to ten is the function key with no modifier keys, and 11 to 20 indicate shifted function keys. So 12 indicates Shift-F2.
 
-"Boot status": Select "Auto" to autoboot this application (see above). Since only one autoboot application is allowed, if you set "Auto" for an application, EmuTOS will automatically disable "Auto" for any existing autoboot application.
+"Boot status": Select "Auto" to autoboot this application. Since only one autoboot application is allowed, if you set "Auto" for an application, EmuTOS will automatically disable "Auto" for any existing autoboot application.
 
-"Application type": Selecting TOS or TTP will launch the program in character mode; GEM or GTP will launch the application in graphics mode. The appropriate value will be prefilled according to the type of application selected, and you should not normally change it.
+"Application type": Selecting TOS or TTP will launch the program in text mode; GEM or GTP will launch the application in graphics mode. The appropriate value will be prefilled according to the type of application selected, and you should not normally change it.
 
 "Default dir" specifies the default directory when the application is launched: either the directory of the application itself, or the top window (i.e. the directory of the data file). The one to choose depends on the specific application. If the application has supporting files (such as resource or help files), it typically will look for them in the default directory. For such an application, you will need to specify a default directory of "Application". Otherwise, specify "Window".
 
@@ -396,19 +390,19 @@ When a program is launched due to it being an installed application, the desktop
 
 You can set the defaults for some of this with the [Desktop configuration](#desktop-configuration) dialog.
 
-#### Restoring Your Desktop ####
+### Restoring Your Desktop ###
 
 If you do lots of experiments and end up with a cluttered desktop, you can get back to your original desktop by [rebooting](#rebooting). A much faster way to restore your desktop to its last saved state is to re-read the appropriate ``C:\*.INF`` file. Options -> Read .INF file...
 
 This also lets you have multiple desktops. The easiest way to have multiple desktops is to keep them in ``C:\`` and use the extension ``.INF``. ``GAMES.INF``, ``DEVEL.INF``, and so on, limited only by the eight characters in the base part of the file name.
 
-#### Preferences ####
+### Preferences ###
 
 Use the Options -> Set preferences... dialog to have GEM confirm file deletions, copies or overwrites.
 
 Select More preferences to set how quickly GEM decides you have double clicked on something rather than two separate clicks, whether you have to click on a menu to get it or just mouse over it, and the time and date formats.
 
-#### Desktop Configuration ####
+### Desktop Configuration ###
 
 The two top pairs of radio buttons apply to programs which have not been [installed](#add-an-application). They specify behavior that applies when applications are launched, say via function key or by drag-and-drop. (Installed applications have the same two buttons that apply on a per application basis.)
 
@@ -422,29 +416,29 @@ You can re-assign shortcut keys to menu entries.
 
 Finally, the Desktop Configuration window shows you how much free RAM you have available.
 
-#### Blitter ####
+### Blitter ###
 
 The menu option Options -> Blitter lets you turn the blitter chip on or off, if you have one. Some programs (typically games) have problems with the blitter, so turning it off can help those programs.
 
-#### Cache ####
+### Cache ###
 
-If your processor has a hardware cache, you can disable and enable it here. If not, this menu entry is greyed out.
+If your processor has a hardware cache, you can disable and enable it here. If not, this menu entry is greyed out. Some programs do not work correctly with cache, so EmuTOS lets you disable it.
 
-### Desktop Accessories ###
+## Desktop Accessories ##
 
 Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot.
 
-To deactivate, rename the file or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
+To deactivate, change the file extension, for example to ``.ACS``, or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
 
 **Note** Desktop accessories take up memory even when you aren't using them. Choose wisely.
 
-### Control Panel eXtensions ###
+## Control Panel eXtensions ##
 
 Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like [desktop accessories](#desktop-accessories).They are available in some versions of TOS, and in EmuTOS.
 
 The Control Panel is a special type of accessory that was originally provided by Atari. However, third-party versions are also available.
 
-## EmuCON ##
+# EmuCON #
 
 EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.
 
@@ -466,7 +460,7 @@ The built-in commands are:
 
 | Command   | Usage |
 |-----------|-------|
-| cat/type  | Show a file. Like ``cat`` and  ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
+| cat/type  | Show a file. Like Unix's ``cat`` and DOS's  ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
 | cd        | Change directory. If you begin with a drive letter, e.g. ``D:``, you can change to a different partition. |
 | chmod     | Change the permissions on a file. These are the FAT permissions: h, for hidden; s, for system; and r, for read-only. Use MS-DOS syntax for the permissions, not Unix. |
 | cls/clear | Clear the screen and home the cursor. |
@@ -498,19 +492,19 @@ show [<drive>]
 
 EmuCON is not provided in 192K [ROMs](#rom). However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
 
-## Reporting Bugs ##
+# Reporting Bugs #
 
 Before you report a bug, you should search the EmuTOS [development mailing list's archives](https://sourceforge.net/p/emutos/mailman/emutos-devel/) to see if anyone else has reported your problem or something similar, and a possible solution. You should also check certain [documentation files](#docFiles) in the most recent distribution or the git repository.
 
 To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [development mailing list](https://sourceforge.net/projects/emutos/lists/emutos-devel). There are other, deprecated, ways to file bugs, but this allows anyone to join the discussion, and will usually get a faster response.
 
-## Glossary ##
+# Glossary #
 
 * <a id="aes"></a>AES: *Application Environment Service*, the highest level graphic environment in EmuTOS.
 
 * <a id="eprom"></a>EPROM: *Erasable Programmable Read Only Memory*, reprogrammable [ROM](#rom). Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.
 
-* <a id="natfeats" ></a>NatFeats: *Native Features* support. This is a number of features that some ST emulators provide, and which EmuTOS supports. See your emulator's manual for details.
+* <a id="natfeats" ></a>NatFeats: *Native Features* support. These are pass-through features that some emulators provide. EmuTOS supports a subset of them. See your emulator's manual for details.
 
 * <a id="rom" ></a>ROM: *Read Only Memory*, usually not reprogrammable. See also [EPROM](#eprom). In this manual we will use the terms interchangably.
 
@@ -518,7 +512,7 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 * <a id="wildcards"></a>Wild card: A wild card lets you select multiple characters, and in EmuTOS they are often used in file selections. EmuTOS allows two wild cards. * means the file selection software will accept any legal character from this position to the end of the field. So ``*.WPF`` would find all files with that extension. ? is a wild card for that one character position. So ``A?C.C`` would select all files that have a three letter name with A in the first place, any character in the second, C in the third place, no other characters in the name, and an extension of "C". 
 
-## Resources ##
+# Resources #
 
 Also see the [EmuTOS links page](https://emutos.sourceforge.io/links.html).
 
