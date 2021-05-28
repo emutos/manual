@@ -328,7 +328,7 @@ Once you have selected one or more files, you can copy them to another window by
 
 **Note** Be careful with deletion! There is no "undo".
 
-Those accustomed to more modern graphical user interfaces please note that the old standby shortcuts ^C (for copy) and ^P (for paste) don't work for copying files or directories.
+Note that the common shortcuts ^C (for copy) and ^P (for paste) don't work for copying files or directories.
 
 ### File Information ###
 
@@ -428,7 +428,7 @@ If your processor has a hardware cache, you can disable and enable it here. If n
 
 Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot.
 
-To deactivate, change the file extension, for example to ``.ACS``, or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
+To deactivate, change the file extension, for example to ``.ACX``, or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
 
 **Note** Desktop accessories take up memory even when you aren't using them. Choose wisely.
 
@@ -504,7 +504,7 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 * <a id="eprom"></a>EPROM: *Erasable Programmable Read Only Memory*, reprogrammable [ROM](#rom). Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.
 
-* <a id="natfeats" ></a>NatFeats: *Native Features* support. These are pass-through features that some emulators provide. EmuTOS supports a subset of them. See your emulator's manual for details.
+* <a id="natfeats" ></a>[NatFeats](https://github.com/aranym/aranym/wiki/natfeats-proposal): *Native Features* support. These are features that some emulators provide (rather than requiring the OS to implement them in 68000 code which must then be emulated). EmuTOS supports a subset of them. See your emulator's documentation for details.
 
 * <a id="rom" ></a>ROM: *Read Only Memory*, usually not reprogrammable. See also [EPROM](#eprom). In this manual we will use the terms interchangably.
 
