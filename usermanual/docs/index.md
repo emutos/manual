@@ -2,58 +2,7 @@ Welcome!
 
 This is a work in progress, as is EmuTOS itself. Please bear with us as we improve it. Contributions are welcome.
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
-**Table of Contents**
-
-- [Introduction](#introduction)
-- [License](#license)
-- [Audience](#audience)
-    - [What This Manual Covers](#what-this-manual-covers)
-    - [What This Manual Doesn't Cover](#what-this-manual-doesnt-cover)
-        - [Documentation in the Distribution](#documentation-in-the-distribution)
-    - [Typography](#typography)
-- [Compatibility](#compatibility)
-- [Getting EmuTOS](#getting-emutos)
-    - [Available Archives](#available-archives)
-- [Installation](#installation)
-    - [Atari](#atari)
-        - [Hard or Floppy Drive](#hard-or-floppy-drive)
-        - [Read Only Memory](#read-only-memory)
-        - [Cartridge](#cartridge)
-    - [Amiga](#amiga)
-    - [Other Hardware](#other-hardware)
-- [Booting](#booting)
-- [Rebooting](#rebooting)
-- [The Desktop](#the-desktop)
-    - [Minimal Desktop](#minimal-desktop)
-    - [Floppy Disk Only Desktop](#floppy-disk-only-desktop)
-    - [Hard Drive](#hard-drive)
-    - [Using the Desktop](#using-the-desktop)
-        - [Saving the Desktop](#saving-the-desktop)
-        - [Opening a Disk Drive or Directory](#opening-a-disk-drive-or-directory)
-        - [File Selection](#file-selection)
-        - [Manipulating Files and Directories](#manipulating-files-and-directories)
-        - [File Information](#file-information)
-        - [File Mask](#file-mask)
-    - [What You See](#what-you-see)
-        - [Icons vs. Text](#icons-vs-text)
-        - [Sort Order](#sort-order)
-    - [Customizing the Desktop](#customizing-the-desktop)
-        - [Add an Icon](#add-an-icon)
-        - [Add an Application](#add-an-application)
-        - [Restoring Your Desktop](#restoring-your-desktop)
-        - [Preferences](#preferences)
-        - [Desktop Configuration](#desktop-configuration)
-        - [Blitter](#blitter)
-        - [Cache](#cache)
-    - [Desktop Accessories](#desktop-accessories)
-    - [Control Panel eXtensions](#control-panel-extensions)
-- [EmuCON](#emucon)
-- [Reporting Bugs](#reporting-bugs)
-- [Glossary](#glossary)
-- [Resources](#resources)
-
-<!-- markdown-toc end -->
+[TOC]
 
 # Introduction #
 

@@ -8,4 +8,4 @@ Note to contributors: The HTML manual is served by GitHub Pages from the 'gh-pag
 
 The EmuTOS User Manual. Start here if you know nothing about how to use EmuTOS. For more information, see the User Manual.
 
-Tools required: git, mkdocs. Really nice to have: make, and some sort of table of contents generator. I use Emacs' markdown-toc mode, but I think any decent Markdown ToC generator should work.
+Tools required: git, mkdocs, the exclude extension to mkdocs.

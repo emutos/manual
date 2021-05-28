@@ -19,6 +19,7 @@ copyright: Copyright &copy; 2021 through the most recent change by the respectiv
 markdown_extensions:
     - toc:
         permalink: true
+        title: Table of Contents
 
 # from https://github.com/apenwarr/mkdocs-exclude
 plugins:
