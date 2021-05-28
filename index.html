@@ -627,7 +627,7 @@
 </li>
 </ul>
 <p><strong>Note</strong> Be careful with deletion! There is no "undo".</p>
-<p>Those accustomed to more modern graphical user interfaces please note that the old standby shortcuts ^C (for copy) and ^P (for paste) don't work for copying files or directories.</p>
+<p>Note that the common shortcuts ^C (for copy) and ^P (for paste) don't work for copying files or directories.</p>
 <h3 id="file-information">File Information<a class="headerlink" href="#file-information" title="Permanent link">&para;</a></h3>
 <p>EmuTOS, like Atari TOS, uses the FAT file system, common on MS-DOS and Windows systems of the day. Thus file attributes are a bit different from those of modern operating systems. There is only one date, the date the file was last modified. Files may be marked h, for hidden; s, for system; and r, for read-only.</p>
 <p>There is also an archive flag. When set, this file has been changed since the last archive was made. Backup software can use this bit to archive only changed files, and then reset the flag. But neither EmuDesk nor EmuCON will allow you to edit this flag.</p>
@@ -683,7 +683,7 @@
 <p>If your processor has a hardware cache, you can disable and enable it here. If not, this menu entry is greyed out. Some programs do not work correctly with cache, so EmuTOS lets you disable it.</p>
 <h2 id="desktop-accessories">Desktop Accessories<a class="headerlink" href="#desktop-accessories" title="Permanent link">&para;</a></h2>
 <p>Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of <code>.ACC</code>. To activate, put the file in the root directory of your boot drive, and reboot.</p>
-<p>To deactivate, change the file extension, for example to <code>.ACS</code>, or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the <code>C:\AUTO</code> directory.</p>
+<p>To deactivate, change the file extension, for example to <code>.ACX</code>, or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the <code>C:\AUTO</code> directory.</p>
 <p><strong>Note</strong> Desktop accessories take up memory even when you aren't using them. Choose wisely.</p>
 <h2 id="control-panel-extensions">Control Panel eXtensions<a class="headerlink" href="#control-panel-extensions" title="Permanent link">&para;</a></h2>
 <p>Control Panel eXtensions (CPXs) are short programs that extend the control panel. They terminate and stay resident, much like <a href="#desktop-accessories">desktop accessories</a>.They are available in some versions of TOS, and in EmuTOS.</p>
@@ -813,7 +813,7 @@ show [&lt;drive&gt;]
 <p><a id="eprom"></a>EPROM: <em>Erasable Programmable Read Only Memory</em>, reprogrammable <a href="#rom">ROM</a>. Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.</p>
 </li>
 <li>
-<p><a id="natfeats" ></a>NatFeats: <em>Native Features</em> support. These are pass-through features that some emulators provide. EmuTOS supports a subset of them. See your emulator's manual for details.</p>
+<p><a id="natfeats" ></a><a href="https://github.com/aranym/aranym/wiki/natfeats-proposal">NatFeats</a>: <em>Native Features</em> support. These are features that some emulators provide (rather than requiring the OS to implement them in 68000 code which must then be emulated). EmuTOS supports a subset of them. See your emulator's documentation for details.</p>
 </li>
 <li>
 <p><a id="rom" ></a>ROM: <em>Read Only Memory</em>, usually not reprogrammable. See also <a href="#eprom">EPROM</a>. In this manual we will use the terms interchangably.</p>
@@ -898,5 +898,5 @@ show [&lt;drive&gt;]
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2021-05-27 17:31:39.055457+00:00
+Build Date UTC : 2021-05-28 15:43:47.285813+00:00
 -->
