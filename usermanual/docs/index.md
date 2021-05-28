@@ -219,6 +219,39 @@ Many options also have shortcut keys, e.g. ^S to save the desktop. You can note 
 
 Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter. It will install icons on the desktop for the drives it recognizes.
 
+### The Pulldown Menus ###
+
+EmuDesk provides four pull-down menus in the upper left corner of the screen.
+
+  * Desk: The left-hand most pulldown menu provides access to the Desktop Info program, and to any [desktop accessories](#desktop-accessories).
+
+    ![The Desk menu, showing one accessory.](images/desk.menu.png "The Desk menu, showing one accessory")
+
+    *Above: The Desk menu, showing one accessory*
+
+
+  * File: The File menu shows a number of file manipulation functions.
+
+    ![The File menu](images/file.menu.png "The File menu")
+
+    *Above: The File menu*
+
+    The last menu entry, Shutdown, is an example native feature, or [NatFeat](#natfeats)
+
+  * View: The View menu gives different ways to display [directory windows](#opening-a-disk-drive-or-directory) and the files in them.
+
+    ![The View menu](images/view.menu.png "The View menu")
+
+    *Above: The View menu*
+
+    As you can see, this computer user prefers to [display files](#what-you-see) by name, rather than by icons, and to sort by name.
+
+  * Options: The Options menu gives access to a number of [tools](#customizing-the-desktop) for fine tuning EmuTOS.
+
+    ![The Options menu](images/options.menu.png "The Options menu")
+
+    *Above: The Options menu*
+
 ### Saving the Desktop ###
 
 As you move in to EmuTOS, you will change how the desktop works, such as how you want to sort directories. You can preserve those choices across boots by saving the desktop. Hit ^S or go to Options -> Save Desktop. EmuDesk will ask you to confirm. Click on OK, and you are done.
@@ -375,7 +408,13 @@ If your processor has a hardware cache, you can disable and enable it here. If n
 
 ## Desktop Accessories ##
 
-Desktop Accessories are programs that stay resident in memory, and are available from the Desktop menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot.
+![The Desk menu, showing one accessory.](images/desk.menu.png "The Desk menu, showing one accessory")
+
+*Above: The Desk menu, showing one accessory*
+
+Desktop Accessories are programs that stay resident in memory, and are available from the Desk menu. They have an extension of ``.ACC``. To activate, put the file in the root directory of your boot drive, and reboot.
+
+The illustration shows the Desk menu, with an entry for the Desktop info program. Below that is a separator line, then one accessory, a reversi game.
 
 To deactivate, change the file extension, for example to ``.ACX``, or move it to a different directory, then reboot. Or simply reboot and boot from a different drive. You can also hold a control key down while booting to bypass loading accessories and the ``C:\AUTO`` directory.
 
@@ -459,7 +498,7 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 
 * <a id="vdi"></a>VDI: *Virtual Device Interface*, provides low level drawing (lines, polygons, etc.), font support, and handles user events such as mouse clicks.
 
-* <a id="wildcards"></a>Wild card: A wild card lets you select multiple characters, and in EmuTOS they are often used in file selections. EmuTOS allows two wild cards. * means the file selection software will accept any legal character from this position to the end of the field. So ``*.WPF`` would find all files with that extension. ? is a wild card for that one character position. So ``A?C.C`` would select all files that have a three letter name with A in the first place, any character in the second, C in the third place, no other characters in the name, and an extension of "C". 
+* <a id="wildcards"></a>Wild card: A wild card lets you select multiple characters, and in EmuTOS they are often used in file selections. EmuTOS allows two wild cards. * means the file selection software will accept any legal character from this position to the end of the field. So ``*.WPF`` would find all files with that extension. ? is a wild card for that one character position. So ``A?C.C`` would select all files that have a three letter name with A in the first place, any character in the second, C in the third place, no other characters in the name, and an extension of "C".
 
 # Resources #
 
