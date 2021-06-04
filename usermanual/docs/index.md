@@ -330,6 +330,10 @@ You can set the mask for displaying files in the folder windows: File -> Set fil
 
 ## What You See ##
 
+![The View menu](images/view.menu.png "The View menu")
+
+*Above: The View menu*
+
 The View menu lets you change how you see files in folder windows.
 
 ### Icons vs. Text ###
