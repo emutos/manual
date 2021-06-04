@@ -264,6 +264,10 @@ If you save the desktop with windows open to directories, you will preserve thos
 
 Folder windows have several widgets of interest.
 
+![A directory window](images/directory.window.png "A directory window")
+
+*Above: A directory window*
+
 * Scroll bars on the right and bottom allow scrolling. Click on the scroll bar for gross movement, or on the arrows at the ends of the scroll bar for fine movement.
 
 * The title bar, across the top, has the path to the current directory, e.g. `C:\AUTO\*.*` or `C:\*.*`. You can specify which files will show up in the window by [setting the file mask](#file-mask). The title bar shows the selected file mask.
