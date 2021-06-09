@@ -20,7 +20,7 @@ This manual is for EmuTOS users. For more on EmuTOS, see the [web site](https://
 
 ## What This Manual Covers ##
 
-This manual describes EmuTOS Version 1.0.1.
+This manual describes EmuTOS Version 1.1.
 
 ## What This Manual Doesn't Cover ##
 
@@ -86,6 +86,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) ([EmuCON](#EmuCON) only)                              |
 | emutos-firebee-X.Y.zip      | FireBee executable                                                             |
 | emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive)              |
+| emutos-lisa-X.Y.zip         | EmuTOS for the Apple Lisa                                                      |
 | emutos-m548x-bas-X.Y.zip    | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
 | emutos-m548x-dbug-X.Y.zip   | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
 | emutos-pak3-X.Y.zip         |                                                                                |
@@ -130,7 +131,9 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 # Booting #
 
-Successful initialization after power up or a hard reset will produce a screen similar to this one.
+Very early after a hard reset or power up, EmuTOS emits its current version to the display, mostly so that developers know it is there and running.
+
+Successful initialization will produce a screen similar to this one.
 
 ![EmuTOS boot screen](images/boot.screen.png "EmuTOS boot screen")
 
@@ -437,6 +440,10 @@ The Control Panel is a special type of accessory that was originally provided by
 # EmuCON #
 
 EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.
+
+EmuCON launches (File -> Execute EmuCON or ^Z) with the working director set to the top open window. If there is no open window, the working directory is the top directory in the boot drive, typically ``C:\`` or ``A:\``.
+
+The default path environment variable PATH is set from the [AES](#aes)'s PATH variable.
 
 It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works for standard out, but not for standard in or standard error. [Wild cards](#wildcards) also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
 
