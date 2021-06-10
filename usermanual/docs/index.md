@@ -131,7 +131,7 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 # Booting #
 
-Very early after a hard reset or power up, EmuTOS emits its current version to the display, mostly so that developers know it is there and running.
+Very early after a hard reset or power up, EmuTOS emits its current version to the display. This so that you know it is there and running while hardware is initialized (which can take a while).
 
 Successful initialization will produce a screen similar to this one.
 
