@@ -1,6 +1,8 @@
+![EmuTOS header logo](images/emutos.header.shadow.png)
+
 Welcome!
 
-This is a work in progress, as is EmuTOS itself. Please bear with us as we improve it. Contributions are welcome.
+This manual is a work in progress. Contributions are welcome.
 
 [TOC]
 
