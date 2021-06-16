@@ -25,6 +25,9 @@ jobs:
       # This is purely for a nicer looking commit history
       run: git config --global user.name "EmuTOS documentation bot"
     - name: Build and deploy website
+      # MkDocs 1.2, released on June 7th 2021, has a regression: it only pushes
+      # HTML files to GitHub when called with the '--force' option.
+      # https://github.com/mkdocs/mkdocs/commit/2688a6d88d61066268c19b51c835fcc1a8a9a43c
       run: |
         cd usermanual
-        mkdocs gh-deploy
+        mkdocs gh-deploy --force
