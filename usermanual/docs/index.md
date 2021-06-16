@@ -14,7 +14,7 @@ EmuTOS is a single-user single-tasking operating system for 32-bit Atari compute
 
 All the source code is open and free, licensed under the GNU General Public License (GPL), Version 2, June 1991. The text of the license is in the [distribution](#docFiles).
 
-> Erm, what is our license for this document? Gnu FDL? Creative Commons License?
+This manual is also licensed under the GNU General Public License (GPL), Version 2, June 1991. A copy of the license is in the ``docs`` directory of the [git repository](https://github.com/emutos/manual).
 
 # Audience #
 
