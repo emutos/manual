@@ -256,8 +256,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p><img alt="EmuTOS header logo" src="images/emutos.header.shadow.png" /></p>
 <p>Welcome!</p>
-<p>This is a work in progress, as is EmuTOS itself. Please bear with us as we improve it. Contributions are welcome.</p>
+<p>This manual is a work in progress. Contributions are welcome.</p>
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#license">License</a></li>
@@ -337,7 +338,7 @@
 <h1 id="audience">Audience<a class="headerlink" href="#audience" title="Permanent link">&para;</a></h1>
 <p>This manual is for EmuTOS users. For more on EmuTOS, see the <a href="https://emutos.sourceforge.io">web site</a>.</p>
 <h2 id="what-this-manual-covers">What This Manual Covers<a class="headerlink" href="#what-this-manual-covers" title="Permanent link">&para;</a></h2>
-<p>This manual describes EmuTOS Version 1.0.1.</p>
+<p>This manual describes EmuTOS Version 1.1.</p>
 <h2 id="what-this-manual-doesnt-cover">What This Manual Doesn't Cover<a class="headerlink" href="#what-this-manual-doesnt-cover" title="Permanent link">&para;</a></h2>
 <p>Getting the current git repository, or compiling the source. However, you can get the source for recent releases. See <a href="#available-archives">Available Archives</a>.</p>
 <p>Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdFire processor. It runs on Atari ST hardware, some Amigas, and a variety of other machines that roughly emulate the Atari ST. It also runs on a number of emulators, such as Hatari and ARAnyM. Since this is a wide variety of hardware, we refer you to the documentation for that hardware.</p>
@@ -460,6 +461,10 @@
 <td>EmuTOS in an <a href="#hard-or-floppy-drive">Atari floppy diskette image</a></td>
 </tr>
 <tr>
+<td>emutos-lisa-X.Y.zip</td>
+<td>EmuTOS for the Apple Lisa</td>
+</tr>
+<tr>
 <td>emutos-m548x-bas-X.Y.zip</td>
 <td>For M548x evaluation boards produced by Freescale, with ColdFire CPUs.</td>
 </tr>
@@ -500,7 +505,8 @@
 <h2 id="amiga">Amiga<a class="headerlink" href="#amiga" title="Permanent link">&para;</a></h2>
 <h2 id="other-hardware">Other Hardware<a class="headerlink" href="#other-hardware" title="Permanent link">&para;</a></h2>
 <h1 id="booting">Booting<a class="headerlink" href="#booting" title="Permanent link">&para;</a></h1>
-<p>Successful initialization after power up or a hard reset will produce a screen similar to this one.</p>
+<p>Very early after a hard reset or power up, EmuTOS emits its current version to the display. This so that you know it is there and running while hardware is initialized (which can take a while).</p>
+<p>Successful initialization will produce a screen similar to this one.</p>
 <p><img alt="EmuTOS boot screen" src="images/boot.screen.png" title="EmuTOS boot screen" /></p>
 <p><em>Above: EmuTOS boot screen on an RGB screen</em></p>
 <p>The normal boot sequence is to initialize the hardware, then the operating system in <a href="#rom">ROM</a>. If there is a game cartridge present, control passes to it. Otherwise the OS looks for a hard drive. If it finds one, it runs programs in <code>C:\AUTO</code> and loads accessories in <code>C:\</code>. If there is no hard drive, the operating system looks for a floppy drive at A:. If it finds A:, the OS executes programs in <code>A:\AUTO</code> and loads accessories in <code>A:</code>. However, you can bypass portions of that sequence as noted below.</p>
@@ -725,6 +731,8 @@
 <p>The Control Panel is a special type of accessory that was originally provided by Atari. However, third-party versions are also available.</p>
 <h1 id="emucon">EmuCON<a class="headerlink" href="#emucon" title="Permanent link">&para;</a></h1>
 <p>EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.</p>
+<p>EmuCON launches (File -&gt; Execute EmuCON or ^Z) with the working director set to the top open window. If there is no open window, the working directory is the top directory in the boot drive, typically <code>C:\</code> or <code>A:\</code>.</p>
+<p>The default path environment variable PATH is set from the <a href="#aes">AES</a>'s PATH variable.</p>
 <p>It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works for standard out, but not for standard in or standard error. <a href="#wildcards">Wild cards</a> also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:</p>
 <pre><code>C:\&gt;echo foo &gt; bar.txt
 C:\&gt;ls bar*.*
@@ -932,6 +940,6 @@ show [&lt;drive&gt;]
 </html>
 
 <!--
-MkDocs version : 1.2
-Build Date UTC : 2021-06-07 18:47:05.568158+00:00
+MkDocs version : 1.2.1
+Build Date UTC : 2021-06-16 21:26:04.789395+00:00
 -->
