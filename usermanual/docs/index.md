@@ -24,7 +24,7 @@ This manual is for EmuTOS users. For more on EmuTOS, see the [web site](https://
 
 ## What This Manual Covers ##
 
-This manual describes EmuTOS Version 1.1.
+This manual describes EmuTOS Version 1.1.1.
 
 ## What This Manual Doesn't Cover ##
 
