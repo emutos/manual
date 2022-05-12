@@ -13,4 +13,4 @@ Copyright 2021 [The EmuTOS development team](https://raw.githubusercontent.com/e
 
 The EmuTOS User Manual. Start here if you know nothing about how to use EmuTOS. For more information, see the User Manual.
 
-Tools required: git, mkdocs, the exclude extension to mkdocs.
+Tools required: git, mkdocs, the [exclude extension](https://github.com/apenwarr/mkdocs-exclude) to mkdocs.
