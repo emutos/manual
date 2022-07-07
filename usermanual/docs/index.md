@@ -77,25 +77,25 @@ These are the zip archive files available for download, where X.Y indicates the 
 
 Multi-lingual versions will have multiple files. There are two differences: the language, Czech, French, etc., and the television format (NTSC or PAL) your hardware supports, if any. See the `readme.txt` file in the root directory of the zip file.
 
-| File name                   | Use                                                                            |
+| File name | Use |
 |-----------------------------|--------------------------------------------------------------------------------|
-| emucon-X.Y.zip              | [EmuCON](#emucon) a standalone shell program as a separate executable                                             |
-| emutos-1024k-X.Y.zip        | One megabyte multilingual [ROM](#read-only-memory) image. As Atari does not support 1 MB images, this is for Hatari.|
-| emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image                      |
-| emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image                              |
-| emutos-512k-X.Y.zip         | 512 kilobyte [Atari ROM](#read-only-memory) image                              |
-| emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image                                          |
-| emutos-amiga-rom-X.Y.zip    | [Amiga ROM](#amiga) image                                                      |
-| emutos-aranym-X.Y.zip       | ARAnyM (emulator) image                                                        |
-| emutos-cartridge-X.Y.zip    | [Atari cartridge image](#cartridge) ([EmuCON](#EmuCON) only)                              |
-| emutos-firebee-X.Y.zip      | FireBee executable                                                             |
-| emutos-floppy-X.Y.zip       | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive)              |
-| emutos-lisa-X.Y.zip         | EmuTOS for the Apple Lisa                                                      |
-| emutos-m548x-bas-X.Y.zip    | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
-| emutos-m548x-dbug-X.Y.zip   | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
-| emutos-pak3-X.Y.zip         |                                                                                |
-| emutos-prg-X.Y.zip          | EmuTOS as an [Atari executable](#hard-or-floppy-drive)                         |
-| emutos-src-X.Y.tar.gz       | Source code for this version, including some documentation not found elsewhere |
+| emucon-X.Y.zip | [EmuCON](#emucon) a standalone shell program as a separate executable |
+| emutos-1024k-X.Y.zip | One megabyte multilingual [ROM](#read-only-memory) image. As Atari does not support 1 MB images, this is for Hatari.|
+| emutos-192k-X.Y.zip | 192 kilobyte limited [Atari ROM](#read-only-memory) image |
+| emutos-256k-X.Y.zip | 256 kilobyte [Atari ROM](#read-only-memory) image |
+| emutos-512k-X.Y.zip | 512 kilobyte [Atari ROM](#read-only-memory) image |
+| emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image |
+| emutos-amiga-rom-X.Y.zip | [Amiga ROM](#amiga) image |
+| emutos-aranym-X.Y.zip | ARAnyM (emulator) image |
+| emutos-cartridge-X.Y.zip | [Atari cartridge image](#cartridge) ([EmuCON](#EmuCON) only) |
+| emutos-firebee-X.Y.zip | FireBee executable |
+| emutos-floppy-X.Y.zip | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive) |
+| emutos-lisa-X.Y.zip | EmuTOS for the Apple Lisa |
+| emutos-m548x-bas-X.Y.zip | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
+| emutos-m548x-dbug-X.Y.zip | For M548x evaluation boards produced by Freescale, with ColdFire CPUs. |
+| emutos-pak3-X.Y.zip | |
+| emutos-prg-X.Y.zip | EmuTOS as an [Atari executable](#hard-or-floppy-drive) |
+| emutos-src-X.Y.tar.gz | Source code for this version, including some documentation not found elsewhere |
 
 # Installation #
 
@@ -165,13 +165,13 @@ There are a number of features to note about the boot screen.
 
 - Some useful functions:
 
-    - Hold a control key down to bypass the ``C:\AUTO`` directory and installing [accessories](#desktop-accessories). This is useful for debugging complicated boot sequences.
+- Hold a control key down to bypass the ``C:\AUTO`` directory and installing [accessories](#desktop-accessories). This is useful for debugging complicated boot sequences.
 
-    - Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from [ROM](#rom).
+- Hold down an Alternate key to bypass booting from a hard drive. This would allow booting from a floppy drive if one is present, or from [ROM](#rom).
 
-    - To boot from any drive, press its letter. For example, to boot from I: press the i key. This allows for different custom setups.
+- To boot from any drive, press its letter. For example, to boot from I: press the i key. This allows for different custom setups.
 
-    - Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might be useful for recovering from a boot sequence gone wrong.
+- Press the escape key to bypass the desktop and go directly to [EmuCON](#emucon). This might be useful for recovering from a boot sequence gone wrong.
 
 # Rebooting #
 
@@ -232,34 +232,34 @@ Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't h
 
 EmuDesk provides four pull-down menus in the upper left corner of the screen.
 
-  * Desk: The left-hand most pulldown menu provides access to the Desktop Info program, and to any [desktop accessories](#desktop-accessories).
+* Desk: The left-hand most pulldown menu provides access to the Desktop Info program, and to any [desktop accessories](#desktop-accessories).
 
-    ![The Desk menu, showing one accessory.](images/desk.menu.png "The Desk menu, showing one accessory")
+![The Desk menu, showing one accessory.](images/desk.menu.png "The Desk menu, showing one accessory")
 
-    *Above: The Desk menu, showing one accessory*
+*Above: The Desk menu, showing one accessory*
 
 
-  * File: The File menu shows a number of file manipulation functions.
+* File: The File menu shows a number of file manipulation functions.
 
-    ![The File menu](images/file.menu.png "The File menu")
+![The File menu](images/file.menu.png "The File menu")
 
-    *Above: The File menu*
+*Above: The File menu*
 
-    The last menu entry, Shutdown, is an example native feature, or [NatFeat](#natfeats)
+The last menu entry, Shutdown, is an example native feature, or [NatFeat](#natfeats)
 
-  * View: The View menu gives different ways to display [directory windows](#opening-a-disk-drive-or-directory) and the files in them.
+* View: The View menu gives different ways to display [directory windows](#opening-a-disk-drive-or-directory) and the files in them.
 
-    ![The View menu](images/view.menu.png "The View menu")
+![The View menu](images/view.menu.png "The View menu")
 
-    *Above: The View menu*
+*Above: The View menu*
 
-    As you can see, this computer user prefers to [display files](#what-you-see) by name, rather than by icons, and to sort by name.
+As you can see, this computer user prefers to [display files](#what-you-see) by name, rather than by icons, and to sort by name.
 
-  * Options: The Options menu gives access to a number of [tools](#customizing-the-desktop) for fine tuning EmuTOS.
+* Options: The Options menu gives access to a number of [tools](#customizing-the-desktop) for fine tuning EmuTOS.
 
-    ![The Options menu](images/options.menu.png "The Options menu")
+![The Options menu](images/options.menu.png "The Options menu")
 
-    *Above: The Options menu*
+*Above: The Options menu*
 
 ### Saving the Desktop ###
 
@@ -281,7 +281,7 @@ Folder windows have several widgets of interest.
 
 * The title bar, across the top, has the path to the current directory, e.g. `C:\AUTO\*.*` or `C:\*.*`. You can specify which files will show up in the window by [setting the file mask](#file-mask). The title bar shows the selected file mask.
 
-    To move the window around on the desktop, click and drag the title bar.
+To move the window around on the desktop, click and drag the title bar.
 
 * In the upper left-hand corner is the folder button. Clicking on this goes up a folder in the hierarchy. At the top folder of a partition, it will close the window. You can also go up a folder with File -> Close folder (^H). You can close a window regardless of where in the file hierarchy it is with File -> Close top window (^U).
 
@@ -309,13 +309,13 @@ Once you have selected one or more files, you can copy them to another window by
 
 * To search for an item in the current window, File -> Search (^F).
 
-    This prompts for a search string, then searches for matching files and folders.  The search string entered is not the usual TOS [wildcard](#wildcards) specification: any characters you enter must be matched, but missing characters are ignored, i.e. are treated as though they were wildcards. For example, searching for "A.T" will match "A.T", "ABC.TTP", etc. So "A.T" is the equivalent of "A\*.T\*.
+This prompts for a search string, then searches for matching files and folders. The search string entered is not the usual TOS [wildcard](#wildcards) specification: any characters you enter must be matched, but missing characters are ignored, i.e. are treated as though they were wildcards. For example, searching for "A.T" will match "A.T", "ABC.TTP", etc. So "A.T" is the equivalent of "A\*.T\*.
 
-    If there are no icons currently selected, Search just selects all matching files and folders in the topmost window, and the search ends.
+If there are no icons currently selected, Search just selects all matching files and folders in the topmost window, and the search ends.
 
-    Otherwise, the folders corresponding to the selected icons are searched recursively, in sequence.  If a folder contains a matching name, the folder is displayed in a window, with the matched files selected, and the user is prompted to continue to search or cancel.
+Otherwise, the folders corresponding to the selected icons are searched recursively, in sequence. If a folder contains a matching name, the folder is displayed in a window, with the matched files selected, and the user is prompted to continue to search or cancel.
 
-    If cancel is selected, the search ends, with the window showing the most-recently-matched files; otherwise, the search continues.  When all folders have been searched, an alert is displayed: either "No more files" if at least one file was found, or "xxx not found" if no matching files were found.
+If cancel is selected, the search ends, with the window showing the most-recently-matched files; otherwise, the search continues. When all folders have been searched, an alert is displayed: either "No more files" if at least one file was found, or "xxx not found" if no matching files were found.
 
 * To close a window using the GUI, you have to click repeatedly on the upper left widget in the window, once for each level in the directory tree. Instead, use File -> Close top window (^U). Or you can close the current folder and go up a level with File -> Close folder (^H).
 
@@ -411,9 +411,9 @@ In the same window, select ``More preferences`` to set:
 
 The two top pairs of radio buttons apply to programs which have not been [installed](#add-an-application). They specify behavior that applies when applications are launched, say via function key or by drag-and-drop. (Installed applications have the same two buttons that apply on a per application basis.)
 
-The topmost pair allows you to specify which will be the current directory when an application starts.  "Application" means the directory containing the application; "Window" means the currently-topped window.  This can matter (depending how the application is written), e.g. when a program tries to load a resource or configuration file.
+The topmost pair allows you to specify which will be the current directory when an application starts. "Application" means the directory containing the application; "Window" means the currently-topped window. This can matter (depending how the application is written), e.g. when a program tries to load a resource or configuration file.
 
-The next pair of radio buttons specifies how the filename argument is passed to an application when launched by drag-and-drop.  "Full path" means that the fully-qualified file name is passed (e.g. ``D:\SOMEDIR\AFILE.DAT``). "File name" means that only the file name is passed (e.g. ``AFILE.DAT``).
+The next pair of radio buttons specifies how the filename argument is passed to an application when launched by drag-and-drop. "Full path" means that the fully-qualified file name is passed (e.g. ``D:\SOMEDIR\AFILE.DAT``). "File name" means that only the file name is passed (e.g. ``AFILE.DAT``).
 
 In the process of [adding an application](#add-an-application) to the desktop, you can assign a function key to it. You can inspect and change those assignments. Accepted values are 1 to 20, where 1 to ten is the function key with no modifier keys, and 11 to 20 indicate shifted function keys. So 12 indicates Shift-F2.
 
@@ -473,29 +473,29 @@ EmuTOS's built-in VT-52 emulator respects the RS-232 flow control characters, ^S
 
 The built-in commands are:
 
-| Command   | Usage |
+| Command | Usage |
 |-----------|-------|
-| cat/type  | Show a file. Like Unix's ``cat`` and DOS's  ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
-| cd        | Change directory. If you begin with a drive letter, e.g. ``D:\EXAMPLE``, you change the working directory on that partition, not your current partition. To change partitions, enter the drive letter followed by a colon (:), e.g. ``P:``. |
-| chmod     | Change the permissions on a file. These are the FAT permissions: h, for hidden; s, for system; and r, for read-only. Use MS-DOS syntax for the permissions, not Unix. |
+| cat/type | Show a file. Like Unix's ``cat`` and DOS's ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
+| cd | Change directory. If you begin with a drive letter, e.g. ``D:\EXAMPLE``, you change the working directory on that partition, not your current partition. To change partitions, enter the drive letter followed by a colon (:), e.g. ``P:``. |
+| chmod | Change the permissions on a file. These are the FAT permissions: h, for hidden; s, for system; and r, for read-only. Use MS-DOS syntax for the permissions, not Unix. |
 | cls/clear | Clear the screen and home the cursor. |
-| cp/copy   | Make a copy of a file elsewhere. e.g. ``cp FOO.PRG d:\BAR.PRG`` make a copy of foo.prg called bar.prg in the root directory of d:. See ``mv``/``move`` below. |
-| echo      | Sends everything after it on the line to the display. |
-| exit      | Leave EmuCON. |
-| help      | Show a list of built in commands (this table). Given a command as an argument, show a brief summary of that command's usage. |
-| ls/dir    | Show a directory listing. Given a path, display that file or directory. Unlike EmuDesk, EmuCON's ls will show hidden files. |
-| mkdir/md  | Make a directory. |
-| mode      | Set characteristics of the "terminal", e.g. screen resolution. |
-| more      | Display a file one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q or ^C bails out of showing the file. |
-| mv/move   | Move a file from here to there. This removes the original file from the original directory, leaving it in the destination directory only. Unlike rename, it works across partition boundaries, but is slower on the same partition. See also ``cp``/``copy`` above and ``ren`` below. |
-| path      | Set a search path, analogous to the PATH environment string in DOS or Unix. You may specify multiple folders separated by a semicolon (;). To see the current path, enter the command with no arguements.|
-| pwd       | Print the working (current) directory. |
-| ren       | Rename (move within the working directory). Rename is restricted to moving files on the same partition, but is much faster than mv/move. The standalone version will not rename directories on versions of GEMDOS less than 0.15 due to a bug in those versions of GEMDOS. See ``mv/move`` above. |
-| rm/del    | Remove or delete the given file(s), but not directories. |
-| rmdir/rd  | Remove or delete the given empty directories. |
-| show      | Show information about the given drive. |
-| version   | Show the current version of GEMDOS (not the same as the current version of EmuTOS). |
-| wrap      | Turn screen wrapping on or off, or show its current state. |
+| cp/copy | Make a copy of a file elsewhere. e.g. ``cp FOO.PRG d:\BAR.PRG`` make a copy of foo.prg called bar.prg in the root directory of d:. See ``mv``/``move`` below. |
+| echo | Sends everything after it on the line to the display. |
+| exit | Leave EmuCON. |
+| help | Show a list of built in commands (this table). Given a command as an argument, show a brief summary of that command's usage. |
+| ls/dir | Show a directory listing. Given a path, display that file or directory. Unlike EmuDesk, EmuCON's ls will show hidden files. |
+| mkdir/md | Make a directory. |
+| mode | Set characteristics of the "terminal", e.g. screen resolution. |
+| more | Display a file one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q or ^C bails out of showing the file. |
+| mv/move | Move a file from here to there. This removes the original file from the original directory, leaving it in the destination directory only. Unlike rename, it works across partition boundaries, but is slower on the same partition. See also ``cp``/``copy`` above and ``ren`` below. |
+| path | Set a search path, analogous to the PATH environment string in DOS or Unix. You may specify multiple folders separated by a semicolon (;). To see the current path, enter the command with no arguements.|
+| pwd | Print the working (current) directory. |
+| ren | Rename (move within the working directory). Rename is restricted to moving files on the same partition, but is much faster than mv/move. The standalone version will not rename directories on versions of GEMDOS less than 0.15 due to a bug in those versions of GEMDOS. See ``mv/move`` above. |
+| rm/del | Remove or delete the given file(s), but not directories. |
+| rmdir/rd | Remove or delete the given empty directories. |
+| show | Show information about the given drive. |
+| version | Show the current version of GEMDOS (not the same as the current version of EmuTOS). |
+| wrap | Turn screen wrapping on or off, or show its current state. |
 
 The `help` command shows the (above) list of commands, or individual help for a specific command, like this:
 
@@ -507,7 +507,7 @@ show [<drive>]
 
 EmuCON is not provided in 192K [ROMs](#rom). However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
 
- The standalone version of EmuCON, ``emucon2.tos`` works with Atari TOS as well as EmuTOS. It is available as a separate archive. See [Available Archives](#available-archives).
+The standalone version of EmuCON, ``emucon2.tos`` works with Atari TOS as well as EmuTOS. It is available as a separate archive. See [Available Archives](#available-archives).
 
 <a id="Manipulating-an-EmuTOS-ROM-image"></a>
 # Manipulating an EmuTOS ROM image #
@@ -528,9 +528,9 @@ Changing the displayed language may also change the video output. If you switch 
 
 ## boot-delay ##
 
-During bootup, most Atari TOS versions provide a boot delay to allow slow hard disk devices to come up to speed.  Because EmuTOS frequently runs on emulators or with fast devices, it normally does not have a builtin boot delay.
+During bootup, most Atari TOS versions provide a boot delay to allow slow hard disk devices to come up to speed. Because EmuTOS frequently runs on emulators or with fast devices, it normally does not have a builtin boot delay.
 
-If you are running on real hardware with slower devices, you may wish to add a boot delay.  The boot-delay tool allows you to set a boot delay value (or display the current boot delay value) in an EmuTOS ROM image.
+If you are running on real hardware with slower devices, you may wish to add a boot delay. The boot-delay tool allows you to set a boot delay value (or display the current boot delay value) in an EmuTOS ROM image.
 
 
 # Reporting Bugs #
