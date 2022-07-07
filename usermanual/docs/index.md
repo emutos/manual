@@ -79,7 +79,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 
 | File name                   | Use                                                                            |
 |-----------------------------|--------------------------------------------------------------------------------|
-| emucon-X.Y.zip              | [EmuCON](#EmuCON) shell program as separate executable                                             |
+| emucon-X.Y.zip              | [EmuCON](#emucon) a standalone shell program as a separate executable                                             |
 | emutos-1024k-X.Y.zip        | One megabyte multilingual [ROM](#read-only-memory) image. As Atari does not support 1 MB images, this is for Hatari.|
 | emutos-192k-X.Y.zip         | 192 kilobyte limited [Atari ROM](#read-only-memory) image                      |
 | emutos-256k-X.Y.zip         | 256 kilobyte [Atari ROM](#read-only-memory) image                              |
@@ -226,7 +226,7 @@ Using a new (to you) computer is a bit like moving into a new home. "Where did w
 
 Many options also have shortcut keys, e.g. ^S to save the desktop. You can note these to the right of the menu entries.
 
-Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ASCI (Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter. It will install icons on the desktop for the drives it recognizes.
+Unlike TOS, EmuTOS recognizes hard drives attached to the system, so you don't have to install them. It will recognize ACSI (Atari Computer Systems Interface, Atari's version of SCSI), SCSI and IDE drives if present and if EmuTOS supports the hardware. EmuTOS also recognizes some partitioning schemes, such as that of the IDC SCSI Host adapter. It will install icons on the desktop for the drives it recognizes.
 
 ### The Pulldown Menus ###
 
@@ -309,7 +309,7 @@ Once you have selected one or more files, you can copy them to another window by
 
 * To search for an item in the current window, File -> Search (^F).
 
-    This prompts for a search string, then searches for matching files and folders.  The search string entered is not the usual TOS [wildcard](#wildcards) specification: any characters you enter must be matched, but missing characters are ignored, i.e. are treated as though they were wildcards. For example, searching for "A.T" will match "A.T", "ABC.TTP", etc. To search for "A.T", you would enter exactly that. Entering the period moves to the extension part of the file name. So "A.T" is the equivalent of "A\*.T\*.
+    This prompts for a search string, then searches for matching files and folders.  The search string entered is not the usual TOS [wildcard](#wildcards) specification: any characters you enter must be matched, but missing characters are ignored, i.e. are treated as though they were wildcards. For example, searching for "A.T" will match "A.T", "ABC.TTP", etc. So "A.T" is the equivalent of "A\*.T\*.
 
     If there are no icons currently selected, Search just selects all matching files and folders in the topmost window, and the search ends.
 
@@ -399,7 +399,13 @@ This also lets you have multiple desktops. The easiest way to have multiple desk
 
 Use the Options -> Set preferences... dialog to have GEM confirm file deletions, copies or overwrites.
 
-Select More preferences to set how quickly GEM decides you have double clicked on something rather than two separate clicks, whether you have to click on a menu to get it or just mouse over it, and the time and date formats.
+In the same window, select ``More preferences`` to set:
+
+* how quickly GEM decides you have double clicked on something rather than two separate clicks,
+
+* whether you have to click on a menu to get it or just mouse over it, and
+
+* the time and date formats.
 
 ### Desktop Configuration ###
 
@@ -447,11 +453,11 @@ The Control Panel is a special type of accessory that was originally provided by
 
 EmuCON2 is a basic but useful command-line interpreter, written from scratch by Roger Burrows in 2013 to replace the original EmuTOS CLI.
 
-EmuCON launches (File -> Execute EmuCON or ^Z) with the working director set to the top open window. If there is no open window, the working directory is the top directory in the boot drive, typically ``C:\`` or ``A:\``.
+EmuCON launches (File -> Execute EmuCON or ^Z) with the working directory set to the top open window. If there is no open window, the working directory is the top directory in the boot drive, typically ``C:\`` or ``A:\``.
 
 The default path environment variable PATH is set from the [AES](#aes)'s PATH variable.
 
-It requires approximately 30 kilobytes, and works with Atari TOS as well as EmuTOS. Command line re-direction works for standard out, but not for standard in or standard error. [Wild cards](#wildcards) also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
+It requires approximately 30 kilobytes. Command line re-direction works for standard out, but not for standard in or standard error. [Wild cards](#wildcards) also work. EmuCON is not case sensitive, but the FAT file system does not preserve case. For example:
 
 ```
 C:\>echo foo > bar.txt
@@ -470,10 +476,10 @@ The built-in commands are:
 | Command   | Usage |
 |-----------|-------|
 | cat/type  | Show a file. Like Unix's ``cat`` and DOS's  ``TYPE``. They simply send all of the file to the screen. See ``more`` below.|
-| cd        | Change directory. If you begin with a drive letter, e.g. ``D:``, you can change to a different partition. |
+| cd        | Change directory. If you begin with a drive letter, e.g. ``D:\EXAMPLE``, you change the working directory on that partition, not your current partition. To change partitions, enter the drive letter followed by a colon (:), e.g. ``P:``. |
 | chmod     | Change the permissions on a file. These are the FAT permissions: h, for hidden; s, for system; and r, for read-only. Use MS-DOS syntax for the permissions, not Unix. |
 | cls/clear | Clear the screen and home the cursor. |
-| cp/copy   | Copy a file. See ``mv``/``move`` below. |
+| cp/copy   | Make a copy of a file elsewhere. e.g. ``cp FOO.PRG d:\BAR.PRG`` make a copy of foo.prg called bar.prg in the root directory of d:. See ``mv``/``move`` below. |
 | echo      | Sends everything after it on the line to the display. |
 | exit      | Leave EmuCON. |
 | help      | Show a list of built in commands (this table). Given a command as an argument, show a brief summary of that command's usage. |
@@ -481,10 +487,10 @@ The built-in commands are:
 | mkdir/md  | Make a directory. |
 | mode      | Set characteristics of the "terminal", e.g. screen resolution. |
 | more      | Display a file one screen at a time. Use the space bar to see the next screen. Use the Return or Enter key to advance one line. Q or ^C bails out of showing the file. |
-| mv/move   | Move a file. See also ``cp``/``copy`` above. |
-| path      | Set a search path, analogous to the PATH environment string in DOS or Unix. You may specify multiple folders separated by a semicolon (;). |
+| mv/move   | Move a file from here to there. This removes the original file from the original directory, leaving it in the destination directory only. Unlike rename, it works across partition boundaries, but is slower on the same partition. See also ``cp``/``copy`` above and ``ren`` below. |
+| path      | Set a search path, analogous to the PATH environment string in DOS or Unix. You may specify multiple folders separated by a semicolon (;). To see the current path, enter the command with no arguements.|
 | pwd       | Print the working (current) directory. |
-| ren       | Rename (move within the working directory). It will not rename directories on versions of GEMDOS less than 0.15 due to a bug in those versions of GEMDOS. |
+| ren       | Rename (move within the working directory). Rename is restricted to moving files on the same partition, but is much faster than mv/move. The standalone version will not rename directories on versions of GEMDOS less than 0.15 due to a bug in those versions of GEMDOS. See ``mv/move`` above. |
 | rm/del    | Remove or delete the given file(s), but not directories. |
 | rmdir/rd  | Remove or delete the given empty directories. |
 | show      | Show information about the given drive. |
@@ -500,6 +506,8 @@ show [<drive>]
 ```
 
 EmuCON is not provided in 192K [ROMs](#rom). However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
+
+ The standalone version of EmuCON, ``emucon2.tos`` works with Atari TOS as well as EmuTOS. It is available as a separate archive. See [Available Archives](#available-archives).
 
 <a id="Manipulating-an-EmuTOS-ROM-image"></a>
 # Manipulating an EmuTOS ROM image #
