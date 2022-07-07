@@ -101,6 +101,8 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 
 In many cases, installation of a new operating system is covered by the hardware documentation.
 
+Prior to installation, you may wish to customize your ROM image. You can add a boot delay (for slow hardware) and you can change the language (which may also change the video output). See [Manipulating an EmuTOS ROM image](#Manipulating-an-EmuTOS-ROM-image).
+
 ## Atari ##
 
 No-one at Atari anticipated that thirty years on people would still be hacking Atari computers, so they made little provision for upgrading their operating systems. But you can! Downloads are available at the [EmuTOS download](https://emutos.sourceforge.io/download.html) web site.
@@ -135,7 +137,7 @@ Get the emutos-cartridge*.zip file. See the readme.txt file in the archive for f
 
 # Booting #
 
-Very early after a hard reset or power up, EmuTOS emits its current version to the display. This so that you know it is there and running while hardware is initialized (which can take a while).
+Very early after a hard reset or power up, EmuTOS emits its current version to the display. This so that you know it is there and running while hardware is initialized (which can take a while). If you have added a [boot delay](#Manipulating-an-EmuTOS-ROM-image) it will occur while the version is displayed.
 
 Successful initialization will produce a screen similar to this one.
 
@@ -499,6 +501,30 @@ show [<drive>]
 
 EmuCON is not provided in 192K [ROMs](#rom). However, you can add it to a disk with the ``emucon-X.Y.zip`` [archive](#available-archives).
 
+<a id="Manipulating-an-EmuTOS-ROM-image"></a>
+# Manipulating an EmuTOS ROM image #
+
+There are two command line utilities for manipulating EmuTOS images. They operate on a host computer operating system, Linux, macOS and Windows. They are available at https://sourceforge.net/projects/emutos/files/tools/ and in the tools directory of the source tree. In both cases, see the file tools.txt for the details.
+
+## tos-lang-change ##
+
+Use tos-lang-change to change the display language and/or input keyboard layout in an EmuTOS ROM image. This assumes that the ROM image has multiple languages and that the hardware does not have [NVRAM](#nvram). Since the multi-language ROM images are too large for physical hardware, this means under the Hatari emulator.
+
+However, tos-lang-change also changes the input keyboard language. This affects single language 512K ROMS as well as the multi-language 1024K ROM.
+
+Changing the displayed language may also change the video output. If you switch to or from US English and any other language, you will also change the video output between [NTSC](https://en.wikipedia.org/wiki/NTSC) (United States) and [PAL](https://en.wikipedia.org/wiki/PAL).
+
+| WARNING |
+|:---------------------------|
+| Changing between NTSC (United States) and PAL (the rest of the world) may affect physical hardware negatively! Hatari does not seem to care. |
+
+## boot-delay ##
+
+During bootup, most Atari TOS versions provide a boot delay to allow slow hard disk devices to come up to speed.  Because EmuTOS frequently runs on emulators or with fast devices, it normally does not have a builtin boot delay.
+
+If you are running on real hardware with slower devices, you may wish to add a boot delay.  The boot-delay tool allows you to set a boot delay value (or display the current boot delay value) in an EmuTOS ROM image.
+
+
 # Reporting Bugs #
 
 Before you report a bug, you should search the EmuTOS [development mailing list's archives](https://sourceforge.net/p/emutos/mailman/emutos-devel/) to see if anyone else has reported your problem or something similar, and a possible solution. You should also check certain [documentation files](#docFiles) in the most recent distribution or the git repository.
@@ -512,6 +538,8 @@ To report bugs, or for other discussion about EmuTOS, please join the EmuTOS [de
 * <a id="eprom"></a>EPROM: *Erasable Programmable Read Only Memory*, reprogrammable [ROM](#rom). Generally more useful than ROM in experimental situations. In this manual we will use the terms interchangably.
 
 * <a id="natfeats" ></a>[NatFeats](https://github.com/aranym/aranym/wiki/natfeats-proposal): *Native Features* support. These are features that some emulators provide (rather than requiring the OS to implement them in 68000 code which must then be emulated). EmuTOS supports a subset of them. See your emulator's documentation for details.
+
+* <a id="nvram"></a>NVRAM: *Non-Volatile-RAM*, RAM that will preserve its contents after loss of power to the computer. It is often backed up by a battery. PC users may know it as "CMOS" memory.
 
 * <a id="rom" ></a>ROM: *Read Only Memory*, usually not reprogrammable. See also [EPROM](#eprom). In this manual we will use the terms interchangably.
 
