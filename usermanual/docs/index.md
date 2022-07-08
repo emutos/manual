@@ -397,15 +397,19 @@ This also lets you have multiple desktops. The easiest way to have multiple desk
 
 ### Preferences ###
 
-Use the Options -> Set preferences... dialog to have GEM confirm file deletions, copies or overwrites.
+Use the Options -> Set preferences... dialog to have GEM:
 
-In the same window, select ``More preferences`` to set:
+* confirm file deletions,
 
-* how quickly GEM decides you have double clicked on something rather than two separate clicks,
+* confirm copies, or
 
-* whether you have to click on a menu to get it or just mouse over it, and
+* confirm overwrites.
 
-* the time and date formats.
+* set how quickly GEM decides you have double clicked on something rather than two separate clicks,
+
+* set whether you have to click on a menu to get it or just mouse over it, and
+
+* set the time and date formats.
 
 ### Desktop Configuration ###
 
