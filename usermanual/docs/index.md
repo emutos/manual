@@ -409,7 +409,7 @@ Use the Options -> Set preferences... dialog to have GEM:
 
 * set whether you have to click on a menu to get it or just mouse over it, and
 
-* set the time and date formats.
+* set the EmuDesk time and date formats.
 
 ### Desktop Configuration ###
 
