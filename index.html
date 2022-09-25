@@ -371,7 +371,7 @@
 <tbody>
 <tr>
 <td><a href="https://raw.githubusercontent.com/emutos/emutos/master/doc/announce.txt">announce.txt</a></td>
-<td>A summary of EmuTOS, including more technical information that what is here.</td>
+<td>A summary of EmuTOS, including more technical information than what is here.</td>
 </tr>
 <tr>
 <td><a href="https://raw.githubusercontent.com/emutos/emutos/master/doc/authors.txt">authors.txt</a></td>
@@ -689,7 +689,7 @@
 <p>If you are looking at a folder (directory), the dialog will show you the number of files and folders within it, as well as the time and date.</p>
 <p>For partitions or floppy diskettes, you will see the drive identifier (e.g. A for a floppy drive), the disk label, the numbers of files and folders, and the space used by files (not directories, or metadata), and the available space (in bytes).</p>
 <h3 id="file-mask">File Mask<a class="headerlink" href="#file-mask" title="Permanent link">&para;</a></h3>
-<p>You can set the mask for displaying files in the folder windows: File -&gt; Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional <a href="#wildcards">wild cards</a> work. The title bar shows the file mask.</p>
+<p>You can set the mask for displaying files in the folder windows: File -&gt; Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG and you won't see other executables such as .TTP. The traditional <a href="#wildcards">wild cards</a> work. The title bar shows the file mask.</p>
 <h2 id="what-you-see">What You See<a class="headerlink" href="#what-you-see" title="Permanent link">&para;</a></h2>
 <p><img alt="The View menu" src="images/view.menu.png" title="The View menu" /></p>
 <p><em>Above: The View menu</em></p>
@@ -886,7 +886,7 @@ show [&lt;drive&gt;]
 <h1 id="manipulating-an-emutos-rom-image">Manipulating an EmuTOS ROM image<a class="headerlink" href="#manipulating-an-emutos-rom-image" title="Permanent link">&para;</a></h1>
 <p>There are two command line utilities for manipulating EmuTOS images. They operate on a host computer operating system, Linux, macOS and Windows. They are available at https://sourceforge.net/projects/emutos/files/tools/ and in the tools directory of the source tree. In both cases, see the file tools.txt for the details.</p>
 <h2 id="tos-lang-change">tos-lang-change<a class="headerlink" href="#tos-lang-change" title="Permanent link">&para;</a></h2>
-<p>Use tos-lang-change to change the display language and/or input keyboard layout in an EmuTOS ROM image. This assumes that the ROM image has multiple languages and that the hardware does not have <a href="#nvram">NVRAM</a>. Since the multi-language ROM images are too large for physical hardware, this means under the Hatari emulator.</p>
+<p>Use tos-lang-change to change the display language and/or input keyboard layout in an EmuTOS ROM image for machines lacking <a href="#nvram">NVRAM</a>. This assumes that the ROM image supports multiple languages. Since the multi-language ROM images are too large for physical hardware, this mostly applies to the Hatari emulator.</p>
 <p>However, tos-lang-change also changes the input keyboard language. This affects single language 512K ROMS as well as the multi-language 1024K ROM.</p>
 <p>Changing the displayed language may also change the video output. If you switch to or from US English and any other language, you will also change the video output between <a href="https://en.wikipedia.org/wiki/NTSC">NTSC</a> (United States) and <a href="https://en.wikipedia.org/wiki/PAL">PAL</a>.</p>
 <table>
@@ -897,7 +897,7 @@ show [&lt;drive&gt;]
 </thead>
 <tbody>
 <tr>
-<td align="left">Changing between NTSC (United States) and PAL (the rest of the world) may affect physical hardware negatively! Hatari does not seem to care.</td>
+<td align="left">Changing between NTSC (United States) and PAL (the rest of the world) may affect physical hardware negatively! In Hatari, just the screen refresh (VBL) rate differs (PAL=50Hz, NTSC=60Hz).</td>
 </tr>
 </tbody>
 </table>
@@ -1004,5 +1004,5 @@ show [&lt;drive&gt;]
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-16 18:54:09.949717+00:00
+Build Date UTC : 2022-09-25 14:42:27.443047+00:00
 -->
