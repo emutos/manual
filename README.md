@@ -6,7 +6,7 @@ Note to contributors: The HTML manual is served by GitHub Pages from the 'gh-pag
 
 This README is licensed under the GNU General Public License (GPL), Version 2, June 1991. A copy of the license is in the ``docs`` directory of the [git repository](https://github.com/emutos/manual).
 
-Copyright 2021 [The EmuTOS development team](https://raw.githubusercontent.com/emutos/emutos/master/doc/authors.txt).
+Copyright 2021-2022 [The EmuTOS development team](https://raw.githubusercontent.com/emutos/emutos/master/doc/authors.txt).
 
 
 ## User Manual ##
