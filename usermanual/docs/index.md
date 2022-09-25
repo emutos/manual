@@ -38,7 +38,7 @@ Specific hardware. EmuTOS expects certain hardware, for example a 680x0 or ColdF
 
 | File | Description |
 |-----------|-----|
-| [announce.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/announce.txt) | A summary of EmuTOS, including more technical information that what is here. |
+| [announce.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/announce.txt) | A summary of EmuTOS, including more technical information than what is here. |
 | [authors.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/authors.txt) | Contributors to EmuTOS and a wee bit of the history. |
 | [bugs.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/bugs.txt) | A list of known bugs, including bugs that are known to exist in TOS. Also see ``incompatible.txt``, below. Please read before you file a [bug report](#reporting-bugs). |
 | [changelog.txt](https://raw.githubusercontent.com/emutos/emutos/master/doc/changelog.txt) | Changes from release 0.9.4 until the current version. |
@@ -339,7 +339,7 @@ For partitions or floppy diskettes, you will see the drive identifier (e.g. A fo
 
 ### File Mask ###
 
-You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG. (You won't see other executables such as TTP.) The traditional [wild cards](#wildcards) work. The title bar shows the file mask.
+You can set the mask for displaying files in the folder windows: File -> Set file mask... . For example, if you set the file mask to *.PRG, you will only see executable program files with the extension .PRG and you won't see other executables such as .TTP. The traditional [wild cards](#wildcards) work. The title bar shows the file mask.
 
 ## What You See ##
 
@@ -520,7 +520,7 @@ There are two command line utilities for manipulating EmuTOS images. They operat
 
 ## tos-lang-change ##
 
-Use tos-lang-change to change the display language and/or input keyboard layout in an EmuTOS ROM image. This assumes that the ROM image has multiple languages and that the hardware does not have [NVRAM](#nvram). Since the multi-language ROM images are too large for physical hardware, this means under the Hatari emulator.
+Use tos-lang-change to change the display language and/or input keyboard layout in an EmuTOS ROM image for machines lacking [NVRAM](#nvram). This assumes that the ROM image supports multiple languages. Since the multi-language ROM images are too large for physical hardware, this mostly applies to the Hatari emulator.
 
 However, tos-lang-change also changes the input keyboard language. This affects single language 512K ROMS as well as the multi-language 1024K ROM.
 
@@ -528,7 +528,7 @@ Changing the displayed language may also change the video output. If you switch 
 
 | WARNING |
 |:---------------------------|
-| Changing between NTSC (United States) and PAL (the rest of the world) may affect physical hardware negatively! Hatari does not seem to care. |
+| Changing between NTSC (United States) and PAL (the rest of the world) may affect physical hardware negatively! In Hatari, just the screen refresh (VBL) rate differs (PAL=50Hz, NTSC=60Hz). |
 
 ## boot-delay ##
 
