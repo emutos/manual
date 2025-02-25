@@ -87,7 +87,7 @@ Multi-lingual versions will have multiple files. There are two differences: the 
 | emutos-amiga-floppy-X.Y.zip | [Amiga floppy diskette](#amiga) image |
 | emutos-amiga-rom-X.Y.zip | [Amiga ROM](#amiga) image |
 | emutos-aranym-X.Y.zip | ARAnyM (emulator) image |
-| emutos-cartridge-X.Y.zip | [Atari cartridge image](#cartridge) ([EmuCON](#EmuCON) only) |
+| emutos-cartridge-X.Y.zip | [Atari cartridge image](#cartridge) ([EmuCON](#emucon) only) |
 | emutos-firebee-X.Y.zip | FireBee executable |
 | emutos-floppy-X.Y.zip | EmuTOS in an [Atari floppy diskette image](#hard-or-floppy-drive) |
 | emutos-lisa-X.Y.zip | EmuTOS for the Apple Lisa |
