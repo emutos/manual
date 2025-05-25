@@ -2,6 +2,8 @@
 
 site_name: EmuTOS User Manual
 
+site_url: https://emutos.github.io/manual/
+
 # theme: readthedocs
 theme:
         name: mkdocs
